@@ -1,0 +1,8 @@
+.classpath
+.project
+.settings/
+target/
+.metadata
+.DS_Store
+Servers/
+quest_front/src/main/webapp/tailwindcss
