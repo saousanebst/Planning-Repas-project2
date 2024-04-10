@@ -20,12 +20,7 @@ public class Administrateur extends Compte {
 				+ password + "]";
 	}
 	
-	
-	/*
-	public Recette ajouterRecette(Recette recette) {}
-	public Recette supprimerRecette(Recette recette) {}
-	public Recette modifierRecette(Recette recette) {}
-*/
+
 }
 
 

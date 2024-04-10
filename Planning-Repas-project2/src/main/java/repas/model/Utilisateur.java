@@ -20,13 +20,5 @@ public class Utilisateur extends Compte {
 				+ password + "]";
 	}
 	
-	
-	
-	/*
-	public List<Recette> chercherRecette(){	
-	}
-	
-	public void ajouterRecetteFavoris(Recette recette) {}*/
-	
 
 }

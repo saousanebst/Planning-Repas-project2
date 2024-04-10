@@ -17,9 +17,9 @@ public class Recette {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Integer idRecette;
+	private Integer id;
 	@Column(name="label_recipe", nullable=false, length=50)
-	private String nomRecette;
+	private String nom;
 	@OneToMany
 	private List <Ingredient> ingredients = new ArrayList();
 	
@@ -28,25 +28,25 @@ public class Recette {
 	public Recette() {
 	}
 
-	public Recette(String nomRecette, List<Ingredient> ingredients) {
-		this.nomRecette = nomRecette;
+	public Recette(String nom, List<Ingredient> ingredients) {
+		this.nom = nom;
 		this.ingredients = ingredients;
 	}
 
 	public Integer getIdRecette() {
-		return idRecette;
+		return id;
 	}
 
-	public void setIdRecette(Integer idRecette) {
-		this.idRecette = idRecette;
+	public void setIdRecette(Integer id) {
+		this.id = id;
 	}
 
 	public String getNomRecette() {
-		return nomRecette;
+		return nom;
 	}
 
-	public void setNomRecette(String nomRecette) {
-		this.nomRecette = nomRecette;
+	public void setNomRecette(String nom) {
+		this.nom = nom;
 	}
 
 	public List<Ingredient> getIngredients() {
@@ -59,12 +59,8 @@ public class Recette {
 
 	@Override
 	public String toString() {
-		return "Recette [idRecette=" + idRecette + ", nomRecette=" + nomRecette + ", ingredients=" + ingredients + "]";
+		return "Recette [id=" + id + ", nom=" + nom + ", ingredients=" + ingredients + "]";
 	}
-	
-	
-
-	
 	
 }
 

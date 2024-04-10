@@ -1,8 +1,6 @@
 package repas.model;
 
 import javax.persistence.Column;
-import javax.persistence.Embeddable;
-import javax.persistence.Embedded;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -15,65 +13,42 @@ public class Ingredient {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	Integer idIngredient;
+	private Integer id;
 	@Column(name="label_ingredient", nullable=false, length=50)
-	String nomIngredient;
-	@Column(name= "quantity", columnDefinition = "int(4)")
-	int quantiteIngredient;
-	
+	private String nom;
 	
 	
 	public Ingredient() {
 	}
 
-
-	public Ingredient(Integer idIngredient, String nomIngredient, int quantiteIngredient) {
-		this.idIngredient = idIngredient;
-		this.nomIngredient = nomIngredient;
-		this.quantiteIngredient = quantiteIngredient;
+	public Ingredient(Integer id, String nom) {
+		this.id = id;
+		this.nom = nom;
 	}
-
 
 	public Integer getIdIngredient() {
-		return idIngredient;
+		return id;
 	}
 
 
-	public void setIdIngredient(Integer idIngredient) {
-		this.idIngredient = idIngredient;
+	public void setIdIngredient(Integer id) {
+		this.id = id;
 	}
 
 
 	public String getNomIngredient() {
-		return nomIngredient;
+		return nom;
 	}
 
 
-	public void setNomIngredient(String nomIngredient) {
-		this.nomIngredient = nomIngredient;
-	}
-
-
-	public int getQuantiteIngredient() {
-		return quantiteIngredient;
-	}
-
-
-	public void setQuantiteIngredient(int quantiteIngredient) {
-		this.quantiteIngredient = quantiteIngredient;
+	public void setNomIngredient(String nom) {
+		this.nom = nom;
 	}
 
 
 	@Override
 	public String toString() {
-		return "Ingredient [idIngredient=" + idIngredient + ", nomIngredient=" + nomIngredient + ", quantiteIngredient="
-				+ quantiteIngredient + "]";
+		return "Ingredient [id=" + id + ", nom=" + nom + "]";
 	}
-	
-	
-	
-	/*+ AjouterIngredient() : idIngredient
-	+ SupprimerIngredient () :void
-	 */
 	
 }
