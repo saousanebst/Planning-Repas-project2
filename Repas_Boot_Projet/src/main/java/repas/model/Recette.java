@@ -18,8 +18,10 @@ public class Recette {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
+	
 	@Column(name="label_recipe", nullable=false, length=50)
 	private String nom;
+	
 	@OneToMany
 	private List <Ingredient> ingredients = new ArrayList();
 	
