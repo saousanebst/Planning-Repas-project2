@@ -12,6 +12,8 @@ public interface IDAORecette extends JpaRepository<Recette, Integer>{
 
 	@Query("SELECT r from recipe r where r.ingredient.id=:id")
 	public List<Recette> findAllByIngredient(@Param("id") Integer idIngredient);
+	
+	//rajouter la méthode : getByIdWithIngredients
 
 
 }

@@ -28,6 +28,8 @@ public class IngredientService {
 			return opt.get();
 		}
 	}
+	
+	
 
 	
 	public List<Ingredient> getAll()
