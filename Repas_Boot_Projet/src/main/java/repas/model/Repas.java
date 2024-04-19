@@ -19,8 +19,10 @@ public class Repas {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
+	
 	@Column(name="date_debut",nullable = false)
 	private LocalDate dateDebut;
+	
 	@OneToMany
 	private List <Recette> recettes = new ArrayList();
 	

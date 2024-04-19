@@ -14,6 +14,7 @@ public class Instruction {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
+	
 	@Column(name="quantity_ingredient", nullable=false, length=50)
 	private int quantiteIngredient;
 	
