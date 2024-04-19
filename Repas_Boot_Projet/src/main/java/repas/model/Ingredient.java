@@ -7,15 +7,21 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonView;
+
+import repas.view.Views;
+
 @Entity
 @Table(name="ingredient")
 public class Ingredient {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@JsonView(Views.Common.class)
 	private Integer id;
 	
 	@Column(name="label_ingredient", nullable=false, length=50)
+	@JsonView(Views.Common.class)
 	private String nom;
 	
 	
