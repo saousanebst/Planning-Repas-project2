@@ -10,6 +10,10 @@ import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonView;
+
+import repas.view.Views;
+
 @Entity
 @Table(name="account")
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
@@ -18,18 +22,23 @@ public abstract class Compte {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@JsonView(Views.Common.class)
 	protected Integer id;
 	
 	@Column(name="lastname",nullable = false,length = 40)
+	@JsonView(Views.Common.class)
 	protected String nom;
 	
 	@Column(name="firstname",nullable = false,length = 40)
+	@JsonView(Views.Common.class)
 	protected String prenom;
 	
 	@Column(unique = true, nullable = false,length = 50)
+	@JsonView(Views.Common.class)
 	protected String email;
 	
 	@Column(nullable = false,length = 120)
+	@JsonView(Views.Common.class)
 	protected String password;
 	
 	

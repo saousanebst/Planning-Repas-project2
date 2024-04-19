@@ -11,18 +11,25 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonView;
+
+import repas.view.Views;
+
 @Entity
 @Table(name="recipe")
 public class Recette {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@JsonView(Views.Common.class)
 	private Integer id;
 	
 	@Column(name="label_recipe", nullable=false, length=50)
+	@JsonView(Views.Common.class)
 	private String nom;
 	
 	@OneToMany
+	@JsonView(Views.RecetteWithIngredient.class)
 	private List <Ingredient> ingredients = new ArrayList();
 	
 	

@@ -12,18 +12,25 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonView;
+
+import repas.view.Views;
+
 @Entity
 @Table(name="food")
 public class Repas {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@JsonView(Views.Common.class)
 	private Integer id;
 	
 	@Column(name="date_debut",nullable = false)
+	@JsonView(Views.Common.class)
 	private LocalDate dateDebut;
 	
 	@OneToMany
+	@JsonView(Views.RepasWithRecette.class)
 	private List <Recette> recettes = new ArrayList();
 	
 	
