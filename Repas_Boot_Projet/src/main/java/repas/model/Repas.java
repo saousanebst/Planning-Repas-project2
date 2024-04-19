@@ -38,23 +38,16 @@ public class Repas {
 	}
 
 
-	public Integer getIdRepas() {
+	
+
+
+	public Integer getId() {
 		return id;
 	}
 
 
-	public void setIdRepas(Integer id) {
+	public void setId(Integer id) {
 		this.id = id;
-	}
-
-
-	public List<Recette> getRecettes() {
-		return recettes;
-	}
-
-
-	public void setRecettes(List<Recette> recettes) {
-		this.recettes = recettes;
 	}
 
 
@@ -65,6 +58,16 @@ public class Repas {
 
 	public void setDateDebut(LocalDate dateDebut) {
 		this.dateDebut = dateDebut;
+	}
+
+
+	public List<Recette> getRecettes() {
+		return recettes;
+	}
+
+
+	public void setRecettes(List<Recette> recettes) {
+		this.recettes = recettes;
 	}
 
 
