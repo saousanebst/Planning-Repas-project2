@@ -17,8 +17,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.server.ResponseStatusException;
-
-import repas.model.Ingredient;
 import repas.model.Recette;
 import repas.service.RecetteService;
 
@@ -56,6 +54,12 @@ public class RecetteRestController {
 		{
 			Recette.setId(id);
 			return recetteSrv.update(Recette);
+		}
+		
+
+		public List<Recette> RecetteWithIngredient(Integer id) 
+		{
+			return recetteSrv.getByIdWithIngredients(id);
 		}
 		
 		
