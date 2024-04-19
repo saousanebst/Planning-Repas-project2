@@ -19,12 +19,16 @@ public abstract class Compte {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	protected Integer id;
+	
 	@Column(name="lastname",nullable = false,length = 40)
 	protected String nom;
+	
 	@Column(name="firstname",nullable = false,length = 40)
 	protected String prenom;
+	
 	@Column(unique = true, nullable = false,length = 50)
 	protected String email;
+	
 	@Column(nullable = false,length = 120)
 	protected String password;
 	

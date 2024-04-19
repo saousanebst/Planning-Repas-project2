@@ -19,8 +19,10 @@ public class Repas {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
+	
 	@Column(name="date_debut",nullable = false)
 	private LocalDate dateDebut;
+	
 	@OneToMany
 	private List <Recette> recettes = new ArrayList();
 	
@@ -36,23 +38,16 @@ public class Repas {
 	}
 
 
-	public Integer getIdRepas() {
+	
+
+
+	public Integer getId() {
 		return id;
 	}
 
 
-	public void setIdRepas(Integer id) {
+	public void setId(Integer id) {
 		this.id = id;
-	}
-
-
-	public List<Recette> getRecettes() {
-		return recettes;
-	}
-
-
-	public void setRecettes(List<Recette> recettes) {
-		this.recettes = recettes;
 	}
 
 
@@ -63,6 +58,16 @@ public class Repas {
 
 	public void setDateDebut(LocalDate dateDebut) {
 		this.dateDebut = dateDebut;
+	}
+
+
+	public List<Recette> getRecettes() {
+		return recettes;
+	}
+
+
+	public void setRecettes(List<Recette> recettes) {
+		this.recettes = recettes;
 	}
 
 
