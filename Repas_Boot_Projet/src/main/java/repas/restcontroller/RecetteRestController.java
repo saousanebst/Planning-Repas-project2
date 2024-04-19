@@ -19,6 +19,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.server.ResponseStatusException;
 
 import repas.model.Recette;
+import repas.service.RecetteService;
 
 
 @RestController

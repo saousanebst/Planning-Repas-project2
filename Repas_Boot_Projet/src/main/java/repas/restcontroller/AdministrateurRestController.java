@@ -1,5 +1,7 @@
 package repas.restcontroller;
 
+import java.util.List;
+
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,6 +20,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.server.ResponseStatusException;
 
 import repas.model.Administrateur;
+import repas.service.AdministrateurService;
 @RestController
 @RequestMapping("/api/admin")
 @CrossOrigin("*")
@@ -26,7 +29,7 @@ public class AdministrateurRestController {
 	 AdministrateurService administrateurSrv; 
 	 
 	 @GetMapping
-	 public Liste<AdministrateurRestController>alladministrateurs (){
+	 public List<Administrateur>alladministrateurs (){
 		 
 		 return administrateurSrv.getAll() ; 
 	 }

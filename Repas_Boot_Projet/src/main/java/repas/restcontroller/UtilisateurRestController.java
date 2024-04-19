@@ -1,5 +1,7 @@
 package repas.restcontroller;
 
+import java.util.List;
+
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,6 +20,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.server.ResponseStatusException;
 
 import repas.model.Utilisateur;
+import repas.service.UtilisateurService;
 @RestController
 @RequestMapping("/api/utilisateur")
 @CrossOrigin("*")
@@ -26,7 +29,7 @@ public class UtilisateurRestController {
  UtilisateurService utilisateurSrv; 
  
  @GetMapping
- public Liste<UtilisateurRestController>allUtilisateurs (){
+ public List<Utilisateur>allUtilisateurs (){
 	 
 	 return utilisateurSrv.getAll() ; 
  }
@@ -39,7 +42,7 @@ public class UtilisateurRestController {
 
 	
 	@PostMapping
-	public Utilisateur ajoutUtilisateur (@Valid @RequestBody UtilisateurRestController utilisateur, BindingResult result) 
+	public Utilisateur ajoutUtilisateur (@Valid @RequestBody Utilisateur utilisateur, BindingResult result) 
 	{
 		if(result.hasErrors()) 
 		{
@@ -49,7 +52,7 @@ public class UtilisateurRestController {
 	}
 	
 	@PutMapping("/{id}")
-	public Utilisateur modifierUtilisateur(@PathVariable Integer id,@RequestBody UtilisateurRestController utilisateur) 
+	public Utilisateur modifierUtilisateur(@PathVariable Integer id,@RequestBody Utilisateur utilisateur) 
 	{
 		utilisateur.setId(id);
 		return utilisateurSrv.update(utilisateur);
@@ -57,7 +60,7 @@ public class UtilisateurRestController {
 	
 
 	@PatchMapping("/{id}")
-	public Utilisateur modifierPartiellementUtilisateur(@PathVariable Integer id,@RequestBody UtilisateurRestController utilisateur) 
+	public Utilisateur modifierPartiellementUtilisateur(@PathVariable Integer id,@RequestBody Utilisateur utilisateur) 
 	{
 		utilisateur.setId(id);
 		return utilisateurSrv.updatePartiel(utilisateur);
