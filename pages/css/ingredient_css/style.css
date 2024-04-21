@@ -311,14 +311,6 @@
   background-color: var(--neutral-01);
 }
 
-.liste-ingredients .rectangle {
-  width: 25px;
-  top: 873px;
-  left: 1477px;
-  position: absolute;
-  height: 33px;
-  background-color: #d9d9d9;
-}
 
 .liste-ingredients .content-2 {
   position: absolute;
@@ -344,7 +336,42 @@
   left: 0;
 }
 
-.liste-ingredients .element-2 {
+
+.liste-ingredients table {
+  margin-top: 1300px;
+  width: 100%;
+  border-collapse: collapse;
+  position: relative;
+}
+
+.liste-ingredients th, .liste-ingredients td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.liste-ingredients th {
+  background-color: #6f866a;
+}
+
+.liste-ingredients tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.liste-ingredients tbody tr:hover {
+  background-color: #ddd;
+}
+
+h2 {
+  position: absolute;
+  margin-top :1250px;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+
+
+.liste-ingredients .element-1 {
   position: absolute;
   width: 305px;
   height: 427px;
@@ -355,6 +382,8 @@
   border: 1.5px solid;
   border-color: var(--neutral-03);
 }
+
+
 
 .liste-ingredients .mask-group-5 {
   position: absolute;
@@ -389,7 +418,7 @@
   font-style: var(--body-20px-bold-font-style);
 }
 
-.liste-ingredients .element-3 {
+.liste-ingredients .element-2 {
   position: absolute;
   width: 305px;
   height: 427px;
@@ -401,7 +430,7 @@
   border-color: var(--neutral-03);
 }
 
-.liste-ingredients .element-4 {
+.liste-ingredients .element-3 {
   position: absolute;
   width: 305px;
   height: 427px;
@@ -413,7 +442,7 @@
   border-color: var(--neutral-03);
 }
 
-.liste-ingredients .element-5 {
+.liste-ingredients .element-4 {
   position: absolute;
   width: 305px;
   height: 427px;
@@ -453,23 +482,7 @@
   border-color: var(--neutral-03);
 }
 
-.liste-ingredients .rectangle-2 {
-  width: 38px;
-  top: 256px;
-  left: 0;
-  position: absolute;
-  height: 33px;
-  background-color: #d9d9d9;
-}
 
-.liste-ingredients .rectangle-3 {
-  width: 38px;
-  top: 257px;
-  left: 585px;
-  position: absolute;
-  height: 33px;
-  background-color: #d9d9d9;
-}
 
 .liste-ingredients .text-wrapper-5 {
   width: 26px;
@@ -486,6 +499,31 @@
   white-space: nowrap;
   font-style: var(--body-16px-regular-font-style);
 }
+
+.liste-ingredients .element-5 {
+  position: absolute;
+  width: 305px;
+  height: 427px;
+  top: 451px;
+  left: 0px;
+  background-color: var(--neutral-01);
+  border-radius: 12px;
+  border: 1.5px solid;
+  border-color: var(--neutral-03);
+}
+
+.liste-ingredients .element-6 {
+  position: absolute;
+  width: 305px;
+  height: 427px;
+  top: 451px;
+  left: 330px;
+  background-color: var(--neutral-01);
+  border-radius: 12px;
+  border: 1.5px solid;
+  border-color: var(--neutral-03);
+}
+
 
 .liste-ingredients .element-7 {
   position: absolute;
@@ -511,23 +549,6 @@
   border-color: var(--neutral-03);
 }
 
-.liste-ingredients .rectangle-4 {
-  width: 38px;
-  top: 707px;
-  left: 912px;
-  position: absolute;
-  height: 33px;
-  background-color: #d9d9d9;
-}
-
-.liste-ingredients .rectangle-5 {
-  width: 38px;
-  top: 708px;
-  left: 1233px;
-  position: absolute;
-  height: 33px;
-  background-color: #d9d9d9;
-}
 
 .liste-ingredients .text-wrapper-6 {
   width: 26px;
@@ -564,6 +585,8 @@
   flex: 0 0 auto;
   flex-direction: column;
   align-items: center;
+  font-size: 100px;
+  
 }
 
 .liste-ingredients .text-wrapper-7 {
@@ -647,14 +670,6 @@
   font-style: var(--body-16px-bold-font-style);
 }
 
-.liste-ingredients .rectangle-6 {
-  width: 25px;
-  top: 873px;
-  left: 1060px;
-  position: absolute;
-  height: 33px;
-  background-color: #d9d9d9;
-}
 
 .liste-ingredients .text-wrapper-8 {
   width: 17px;
@@ -672,23 +687,7 @@
   font-style: var(--body-16px-regular-font-style);
 }
 
-.liste-ingredients .rectangle-7 {
-  width: 23px;
-  top: 873px;
-  left: 1198px;
-  position: absolute;
-  height: 33px;
-  background-color: #d9d9d9;
-}
 
-.liste-ingredients .rectangle-8 {
-  position: absolute;
-  width: 25px;
-  height: 33px;
-  top: 873px;
-  left: 1485px;
-  background-color: #d9d9d9;
-}
 
 .liste-ingredients .text-wrapper-9 {
   width: 17px;
@@ -1056,14 +1055,6 @@
   object-fit: cover;
 }
 
-.liste-ingredients .rectangle-9 {
-  width: 38px;
-  top: 871px;
-  left: 428px;
-  position: absolute;
-  height: 33px;
-  background-color: #d9d9d9;
-}
 
 .liste-ingredients .text-wrapper-13 {
   width: 26px;
@@ -1088,4 +1079,63 @@
   top: 1549px;
   left: 562px;
   object-fit: cover;
+}
+
+
+/* Style général */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  color: #333;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #ad1b1b;
+}
+
+/* Style des cases à cocher */
+input[type="checkbox"] {
+  transform: scale(1.5); /* Pour agrandir les cases à cocher */
+}
+
+/* Style des cases cochées */
+input[type="checkbox"]:checked + label::before {
+  content: "\2714"; /* Symbole de check */
+  color: #55b055; /* Couleur verte */
+  font-size: 20px;
+}
+
+/* Style des étiquettes associées aux cases à cocher */
+label {
+  cursor: pointer;
+}
+
+/* Hover sur les étiquettes */
+label:hover {
+  color: #007bff; /* Couleur bleue */
 }
