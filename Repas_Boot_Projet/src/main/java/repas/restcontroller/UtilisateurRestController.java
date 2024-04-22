@@ -19,8 +19,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.server.ResponseStatusException;
 
+import com.fasterxml.jackson.annotation.JsonView;
+
 import repas.model.Utilisateur;
 import repas.service.UtilisateurService;
+import repas.view.Views;
 @RestController
 @RequestMapping("/api/utilisateur")
 @CrossOrigin("*")
@@ -29,12 +32,14 @@ public class UtilisateurRestController {
  UtilisateurService utilisateurSrv; 
  
  @GetMapping
+ @JsonView(Views.Utilisateur.class)
  public List<Utilisateur>allUtilisateurs (){
 	 
 	 return utilisateurSrv.getAll() ; 
  }
 	
  @GetMapping("/{id}")
+ @JsonView(Views.Utilisateur.class)
 	public Utilisateur ficheUtilistaeur(@PathVariable Integer id) 
 	{
 		return utilisateurSrv.getById(id);

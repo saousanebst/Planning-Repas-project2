@@ -19,8 +19,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.server.ResponseStatusException;
 
+import com.fasterxml.jackson.annotation.JsonView;
+
 import repas.model.Administrateur;
 import repas.service.AdministrateurService;
+import repas.view.Views;
 @RestController
 @RequestMapping("/api/admin")
 @CrossOrigin("*")
@@ -29,12 +32,14 @@ public class AdministrateurRestController {
 	 AdministrateurService administrateurSrv; 
 	 
 	 @GetMapping
+	 @JsonView(Views.Administrateur.class)
 	 public List<Administrateur>alladministrateurs (){
 		 
 		 return administrateurSrv.getAll() ; 
 	 }
 		
 	 @GetMapping("/{id}")
+	 @JsonView(Views.Administrateur.class)
 		public Administrateur ficheadministrateur(@PathVariable Integer id) 
 		{
 			return administrateurSrv.getById(id);

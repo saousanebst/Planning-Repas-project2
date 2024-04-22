@@ -17,8 +17,12 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.server.ResponseStatusException;
+
+import com.fasterxml.jackson.annotation.JsonView;
+
 import repas.model.Recette;
 import repas.service.RecetteService;
+import repas.view.Views;
 
 
 @RestController
@@ -29,11 +33,13 @@ public class RecetteRestController {
 	@Autowired 
 		RecetteService recetteSrv;
 		@GetMapping
+		@JsonView(Views.Recette.class)
 		public List<Recette> allRecettes() 
 		{
 			return recetteSrv.getAll();
 		}
 		@GetMapping("/{id}")
+		@JsonView(Views.Recette.class)
 		
 		public Recette ficheRecette(@PathVariable Integer id) 
 		{
@@ -56,7 +62,7 @@ public class RecetteRestController {
 			return recetteSrv.update(Recette);
 		}
 		
-
+		@JsonView(Views.RecetteWithIngredient.class)
 		public List<Recette> RecetteWithIngredient(Integer id) 
 		{
 			return recetteSrv.getByIdWithIngredients(id);
