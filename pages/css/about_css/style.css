@@ -288,22 +288,45 @@
   background-color: var(--neutral-01);
 }
 
+/********************* video ***********/
+
 .about .content-2 {
   display: inline-flex;
-  flex-direction: column;
+  /*flex-direction: column;*/
   align-items: center;
   gap: 80px;
   position: relative;
+  top: 130px;
+  left: 400px;
 }
 
-.about .img-2 {
+
+.about .video-container {
   position: relative;
-  width: 1600px;
-  height: 690px;
-  background-image: url(./img/bg.png);
-  background-size: 100% 100%;
+  width: 100%; /* Réglez la largeur selon vos besoins */
+  max-width: 1600px; /* Par exemple */
+  height: auto; /* Ajustez la hauteur en fonction du ratio de votre vidéo */
+  text-align: center; /* Pour centrer horizontalement */
 }
 
+.about .video-container video {
+  width: 100%;
+  height: auto;
+}
+
+
+.about .title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white; /* Couleur du texte */
+  text-align: center;
+  z-index: 2; /* Assurez-vous que le titre est au-dessus de la vidéo */
+}
+
+/***************************/
+/*
 .about .title {
   display: inline-flex;
   align-items: center;
@@ -312,8 +335,8 @@
   position: absolute;
   top: 354px;
   left: 502px;
-}
-
+}*/
+/*
 .about .feel-the-authentic {
   position: relative;
   width: 596px;
@@ -337,14 +360,15 @@
   background-color: var(--neutral-01);
   border-radius: 53px;
 }
-
+*/
+/*
 .about .vector {
   position: absolute;
   width: 17px;
   height: 21px;
   top: 43px;
   left: 47px;
-}
+}*/
 
 .about .features {
   gap: 87px;
@@ -590,6 +614,23 @@
   top: 0;
 }
 
+/****************** modif Accueil et about **********/
+.about .div-wrapper {
+  /* Supprimer la couleur de fond */
+  background-color: transparent;
+}
+
+.about .menu-3 {
+  /* Ajouter un arrière-plan ovale à A Propos */
+  background-color: #dbdfd0;
+  border-radius: 34px;
+}
+
+.about .menu-3:hover {
+  /* Style hover pour A Propos */
+  background-color: #a0a39a; /* Changer la couleur de fond au survol */
+}
+/*********************/
 .about .text-wrapper-7 {
   position: relative;
   width: fit-content;

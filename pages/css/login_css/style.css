@@ -651,6 +651,25 @@
   top: 0;
 }
 
+/***** correction pour accueil et se connecter */
+.login .menu-2 {
+  /* Supprimer la couleur de fond */
+  background-color: transparent;
+}
+
+.login .menu-7 {
+  /* Ajouter un arrière-plan ovale à Se Connecter */
+  background-color: #dbdfd0;
+  border-radius: 34px;
+}
+
+.login .menu-7:hover {
+  /* Style hover pour Se Connecter */
+  background-color: #a0a39a; /* Changer la couleur de fond au survol */
+}
+/*************************************/
+
+
 .login .text-wrapper-7 {
   position: relative;
   width: fit-content;
