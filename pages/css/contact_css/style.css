@@ -37,16 +37,16 @@
   width: 1314px;
   height: 422px;
   top: 210px;
-  left: 143px;
+  right: 0;
 }
 
 .contact .bottom {
-  position: absolute;
+  position:absolute;
   width: 1314px;
   height: 1px;
   top: 421px;
-  left: 0;
-  background-image: url(./img/line-311.svg);
+  right: 0;
+  /*background-image: url(./img/line-311.svg);*/
   background-size: cover;
   background-position: 50% 50%;
 }
