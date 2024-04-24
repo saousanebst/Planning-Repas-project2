@@ -1,0 +1,118 @@
+<p [style.color]="couleur">{{prenom}}</p>
+
+<h3>[value] et (change)</h3>
+<input type="text" [value]="prenom" (change)="changePrenom($event)"/>
+<button (click)="resetPrenom()">Effacer</button><br/>
+<h3>[(ngModel)]</h3>
+<input type="text" [(ngModel)]="prenom"/>
+<h3>[ngModel] et (ngModelChange)</h3>
+<input type="text" [ngModel]="prenom" (ngModelChange)="prenom = $event.toUpperCase()"/>
+<hr/>
+<select [(ngModel)]="couleur">
+    <option value="#000000">Noir</option>
+    <option value="#008000">Vert</option>
+    <option value="#FFFF00">Jaune</option>
+    <option value="#0000FF">Bleu</option>
+    <option value="#FF0000">Rouge</option>
+  </select><br />
+  <input type="color" [(ngModel)]="couleur">
+  
+<hr/>
+
+  <input type="text" #nom value="fdjjfdjfdj"/>
+  <p bg-black>{{nom.value}}</p>
+
+<hr/>
+
+<fieldset>
+  <input type="number" [(ngModel)]="todo.id"/><br/>
+  <input type="text" [(ngModel)]="todo.title"/><br/>
+  Completé : <input type="checkbox" [(ngModel)]="todo.completed"/>
+
+  <p *ngIf="todo.title && todo.id != 0" [ngClass]="{'negatif': !todo.completed}">{{todo.title}}</p>
+</fieldset>
+
+<div bg-black>Mon exemple d'élément HTML modifié par directive</div>
+
+<hr/>
+Recherche : <input type="text" [(ngModel)]="recherche"/>
+<table style="border: 2px solid">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Titre</th>
+      <th>Complet ?</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let t of search()">
+      <td>{{t.id}}</td>
+      <td>{{t.title}}</td>
+      <td [style.color]="t.completed | todoState">{{t.completed | todoState:"string"}}</td>
+      <!-- <td><span *ngIf="t.completed;else sinon">Terminé</span></td> -->
+      <td></td>
+    </tr>
+  </tbody>
+  <ng-template #sinon>
+    <span>Non terminé</span>
+  </ng-template>
+  <tfoot>
+    <tr>
+      <td><input type="number" [(ngModel)]="todoForm.id"/></td>
+      <td><input type="text" [(ngModel)]="todoForm.title"/></td>
+      <td><input type="checkbox" [(ngModel)]="todoForm.completed"/></td>
+      <td><button (click)="addTodo()">Ajouter</button></td>
+    </tr>
+  </tfoot>
+</table>
+
+<hr/>
+
+<p>{{dtJour}}</p>
+<p>{{dtJour | date:"EEEE dd MMMM yyyy" | uppercase}}</p>
+
+<hr/>
+
+<hello-world texteAfficher="On affiche le prénom" [donnee]="prenom" (sortie)="maSortieDepuisHelloWorld($event)">Le contenu de mon premier appel au composant Hello World</hello-world>
+
+<div hello-world texteAfficher="On affiche le titre du todo" [donnee]="todo.title" (sortie)="maSortieDepuisHelloWorldBis($event)">Le contenu de mon second appel au composant Hello World</div>
+
+<hr/>
+
+<asc-bold>
+  <span standard>voici le texte :</span>
+  <span gras>que vous voulez mettre en gras</span>
+  <span class="grandTexte">Texte dans le style grandTexte</span>
+</asc-bold><br/>
+
+<asc-bold>
+  <span standard>texte dans la flag standard</span>
+  <span gras>texte dans le flag gras</span>
+</asc-bold>
+
+<hr/>
+<hr/>
+
+<asc-text-field label="Prénom : " [value]="prenom" (emetteur)="majPrenom($event)"></asc-text-field>
+
+<asc-text-field label="Titre du todo : " [value]="todo.title"></asc-text-field>
+
+<hr/>
+<asc-list>
+  <ng-template #contenuAInjecter>
+    <h1>Contenu à injecter</h1>
+
+    <h3>Chapitre 3</h3>
+  </ng-template>
+  <ng-template #contenuAInjecterBis>
+    <h1>Contenu à injecter Deuxième</h1>
+  </ng-template>
+</asc-list>
+<hr/>
+
+<p asc-tooltip titre="Et voilà le tooltip">Voilà le message</p>
+
+<asc-tooltip titre="Et voilà le tooltip">Voilà le message</asc-tooltip>
+
+  
