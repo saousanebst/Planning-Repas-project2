@@ -9,7 +9,7 @@ import { HomeComponent } from './home/home.component';
 import { UtilisateurComponent } from './utilisateur/utilisateur.component';
 import { LoginComponent } from './login/login.component';
 import { ContactComponent } from './contact/contact.component';
-import { IngredientComponent } from './ingredient/ingredient.component';
+import { PlatComponent } from './plat/plat.component';
 
 @NgModule({
   declarations: [
@@ -18,8 +18,8 @@ import { IngredientComponent } from './ingredient/ingredient.component';
     UtilisateurComponent,
     LoginComponent,
     ContactComponent,
-    IngredientComponent
-    
+    PlatComponent
+
   ],
   imports: [
     BrowserModule,
