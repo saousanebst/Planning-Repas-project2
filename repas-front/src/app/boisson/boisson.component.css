@@ -1,0 +1,382 @@
+.entres {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .entres .div {
+    background-color: var(--neutral-01);
+    overflow: hidden;
+    width: 1600px;
+    height: 2953px;
+    position: relative;
+  }
+  
+
+  
+  .entres .overlap {
+    position: absolute;
+    width: 1600px;
+    height: 1612px;
+    top: 0;
+    left: 0;
+  }
+  
+  .entres .hero {
+    position: absolute;
+    width: 1600px;
+    height: 1585px;
+    top: 0;
+    left: 0;
+    background-color: var(--neutral-01);
+  }
+  
+  .entres .overlap-2 {
+    position: relative;
+    height: 1496px;
+  }
+  
+  .entres .content-2 {
+    position: absolute;
+    width: 1296px;
+    height: 1386px;
+    top: 110px;
+    left: 164px;
+  }
+  
+  .entres .cards {
+    position: absolute;
+    width: 1296px;
+    height: 880px;
+    top: 506px;
+    left: 0;
+  }
+  
+  .entres .element-2 {
+    position: absolute;
+    width: 306px;
+    height: 428px;
+    top: 0;
+    left: 0;
+    background-color: var(--neutral-01);
+    border-radius: 12px;
+    border: 1.5px solid;
+    border-color: var(--neutral-03);
+  }
+  
+  .entres .mask-group-5 {
+    position: absolute;
+    width: 306px;
+    height: 230px;
+    top: -2px;
+    left: -2px;
+  }
+  
+  .entres .text {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    position: absolute;
+    top: 258px;
+    left: 28px;
+  }
+  
+  .entres .text-wrapper-4 {
+    position: relative;
+    width: fit-content;
+    margin-top: -1px;
+    font-family: var(--body-20px-bold-font-family);
+    font-weight: var(--body-20px-bold-font-weight);
+    color: #2b2e23;
+    font-size: var(--body-20px-bold-font-size);
+    text-align: center;
+    letter-spacing: var(--body-20px-bold-letter-spacing);
+    line-height: var(--body-20px-bold-line-height);
+    white-space: nowrap;
+    font-style: var(--body-20px-bold-font-style);
+  }
+  
+  .entres .text-wrapper-5 {
+    position: relative;
+    width: 246px;
+    font-family: var(--body-16px-regular-font-family);
+    font-weight: var(--body-16px-regular-font-weight);
+    color: #414536;
+    font-size: var(--body-16px-regular-font-size);
+    text-align: center;
+    letter-spacing: var(--body-16px-regular-letter-spacing);
+    line-height: var(--body-16px-regular-line-height);
+    font-style: var(--body-16px-regular-font-style);
+  }
+  
+  .entres .element-3 {
+    position: absolute;
+    width: 306px;
+    height: 428px;
+    top: 0;
+    left: 330px;
+    background-color: var(--neutral-01);
+    border-radius: 12px;
+    border: 1.5px solid;
+    border-color: var(--neutral-03);
+  }
+  
+  .entres .element-4 {
+    position: absolute;
+    width: 306px;
+    height: 428px;
+    top: 0;
+    left: 660px;
+    background-color: var(--neutral-01);
+    border-radius: 12px;
+    border: 1.5px solid;
+    border-color: var(--neutral-03);
+  }
+  
+  .entres .element-5 {
+    position: absolute;
+    width: 306px;
+    height: 428px;
+    top: 0;
+    left: 990px;
+    background-color: var(--neutral-01);
+    border-radius: 12px;
+    border: 1.5px solid;
+    border-color: var(--neutral-03);
+  }
+  
+  .entres .element-6 {
+    position: absolute;
+    width: 306px;
+    height: 428px;
+    top: 452px;
+    left: 0;
+    background-color: var(--neutral-01);
+    border-radius: 12px;
+    border: 1.5px solid;
+    border-color: var(--neutral-03);
+  }
+  
+  .entres .element-7 {
+    position: absolute;
+    width: 306px;
+    height: 428px;
+    top: 452px;
+    left: 330px;
+    background-color: var(--neutral-01);
+    border-radius: 12px;
+    border: 1.5px solid;
+    border-color: var(--neutral-03);
+  }
+  
+  .entres .element-8 {
+    position: absolute;
+    width: 306px;
+    height: 428px;
+    top: 452px;
+    left: 660px;
+    background-color: var(--neutral-01);
+    border-radius: 12px;
+    border: 1.5px solid;
+    border-color: var(--neutral-03);
+  }
+  
+  .entres .element-9 {
+    position: absolute;
+    width: 306px;
+    height: 428px;
+    top: 452px;
+    left: 990px;
+    background-color: var(--neutral-01);
+    border-radius: 12px;
+    border: 1.5px solid;
+    border-color: var(--neutral-03);
+  }
+  
+  .entres .title {
+    gap: 50px;
+    position: absolute;
+    top: 134px;
+    left: 345px;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .entres .title-2 {
+    gap: 20px;
+    position: relative;
+    flex: 0 0 auto;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .entres .text-wrapper-6 {
+    position: relative;
+    width: fit-content;
+    margin-top: -1px;
+    font-family: var(--headline-h1-font-family);
+    font-weight: var(--headline-h1-font-weight);
+    color: #2b2e23;
+    font-size: var(--headline-h1-font-size);
+    text-align: center;
+    letter-spacing: var(--headline-h1-letter-spacing);
+    line-height: var(--headline-h1-line-height);
+    white-space: nowrap;
+    font-style: var(--headline-h1-font-style);
+  }
+  
+  .entres .d-couvrez-notre-d {
+    position: relative;
+    width: 557px;
+    font-family: var(--body-18px-regular-font-family);
+    font-weight: var(--body-18px-regular-font-weight);
+    color: var(--neutral-06);
+    font-size: var(--body-18px-regular-font-size);
+    text-align: center;
+    letter-spacing: var(--body-18px-regular-letter-spacing);
+    line-height: var(--body-18px-regular-line-height);
+    font-style: var(--body-18px-regular-font-style);
+  }
+  
+  .entres .button {
+    display: inline-flex;
+    align-items: flex-start;
+    gap: 15px;
+    position: relative;
+    flex: 0 0 auto;
+  }
+  
+  .entres .button-base {
+    display: flex;
+    width: 120px;
+    height: 48px;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    position: relative;
+    background-color: #ad343e;
+    border-radius: 50px;
+  }
+  
+  .entres .button-2 {
+    all: unset;
+    box-sizing: border-box;
+    position: relative;
+    width: fit-content;
+    font-family: var(--body-16px-bold-font-family);
+    font-weight: var(--body-16px-bold-font-weight);
+    color: var(--neutral-01);
+    font-size: var(--body-16px-bold-font-size);
+    text-align: center;
+    letter-spacing: var(--body-16px-bold-letter-spacing);
+    line-height: var(--body-16px-bold-line-height);
+    white-space: nowrap;
+    font-style: var(--body-16px-bold-font-style);
+  }
+  
+  .entres .button-base-2 {
+    display: flex;
+    width: 150px;
+    height: 48px;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    position: relative;
+    border-radius: 50px;
+    border: 1px solid;
+    border-color: var(--neutral-03);
+  }
+  
+  .entres .button-3 {
+    all: unset;
+    box-sizing: border-box;
+    position: relative;
+    width: fit-content;
+    font-family: var(--body-16px-bold-font-family);
+    font-weight: var(--body-16px-bold-font-weight);
+    color: #2b2e23;
+    font-size: var(--body-16px-bold-font-size);
+    text-align: center;
+    letter-spacing: var(--body-16px-bold-letter-spacing);
+    line-height: var(--body-16px-bold-line-height);
+    white-space: nowrap;
+    font-style: var(--body-16px-bold-font-style);
+  }
+
+  
+  .entres .text-wrapper-9 {
+    position: absolute;
+    top: 1516px;
+    left: 438px;
+    font-family: var(--headline-h1-font-family);
+    font-weight: var(--headline-h1-font-weight);
+    color: #2b2e23;
+    font-size: var(--headline-h1-font-size);
+    text-align: center;
+    letter-spacing: var(--headline-h1-letter-spacing);
+    line-height: var(--headline-h1-line-height);
+    white-space: nowrap;
+    font-style: var(--headline-h1-font-style);
+  }
+  
+  .entres .image {
+    position: absolute;
+    width: 1167px;
+    height: 394px;
+    top: 1627px;
+    left: 206px;
+    object-fit: cover;
+  }
+  
+  
+  /* Styles pour le tableau */
+  .entres .table {
+    border-collapse: collapse;
+    width: 80%; /* Ajustez la largeur selon vos préférences */
+    margin: 0 auto; /* Pour centrer le tableau sur la page */
+  }
+  
+  .entres th, td {
+    border: 1px solid goldenrod;
+    padding: 8px;
+    text-align: center;
+    color: #2b2e23; /* Couleur de texte */
+    font-style: var(--body-20px-bold-font-style); /* Style de police */
+  }
+  
+  
+  /* Style pour le texte du calendrier */
+  .entres .text-wrapper-19 {
+    position: relative;
+    width: fit-content;
+    margin-top: -1px;
+    font-family: var(--body-16px-regular-font-family);
+    font-weight: var(--body-16px-regular-font-weight);
+    color: var(--neutral-02);
+    font-size: var(--body-16px-regular-font-size);
+    letter-spacing: var(--body-16px-regular-letter-spacing);
+    line-height: var(--body-16px-regular-line-height);
+    white-space: nowrap;
+    font-style: var(--body-16px-regular-font-style);
+    color: #2b2e23; /* Couleur de texte */  
+    left: 164px;
+    
+  }
+  
+  /* Style pour l'enveloppe du tableau */
+  /*.entres .table-wrapper {
+    overflow-x: auto;
+  }*/
+  
+  .entres .content-3 {
+    position: absolute;
+    width: 1296px;
+    height: 1386px;
+    
+    left: 164px;
+  }
