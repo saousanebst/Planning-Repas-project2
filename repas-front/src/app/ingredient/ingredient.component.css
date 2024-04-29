@@ -1,0 +1,546 @@
+.liste-ingredients {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .liste-ingredients .div {
+    background-color: var(--neutral-01);
+    overflow: hidden;
+    width: 1600px;
+    height: 2953px;
+    position: relative;
+  }
+  
+  
+  
+  .liste-ingredients .overlap {
+    position: absolute;
+    width: 1606px;
+    height: 2105px;
+    top: 0;
+    left: 0;
+  }
+  
+  .liste-ingredients .hero {
+    position: absolute;
+    width: 1606px;
+    height: 1585px;
+    top: 0;
+    left: 0;
+  }
+  
+  .liste-ingredients .overlap-2 {
+    position: relative;
+    width: 1600px;
+    height: 1585px;
+  }
+  
+  .liste-ingredients .bg {
+    position: absolute;
+    width: 1599px;
+    height: 1585px;
+    top: 0;
+    left: 1px;
+    background-color: var(--neutral-01);
+  }
+  
+  
+  .liste-ingredients .content-2 {
+    position: absolute;
+    width: 1293px;
+    height: 1198px;
+    top: 254px;
+    left: 153px;
+  }
+  
+  .liste-ingredients .overlap-3 {
+    position: absolute;
+    width: 1293px;
+    height: 879px;
+    top: 319px;
+    left: 0;
+  }
+  
+  .liste-ingredients .cards {
+    position: absolute;
+    width: 1293px;
+    height: 879px;
+    top: 0;
+    left: 0;
+  }
+  
+  
+  .liste-ingredients table {
+    margin-top: 1300px;
+    width: 100%;
+    border-collapse: collapse;
+    position: relative;
+  }
+  
+  .liste-ingredients th, .liste-ingredients td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .liste-ingredients th {
+    background-color: #6f866a;
+  }
+  
+  .liste-ingredients tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  .liste-ingredients tbody tr:hover {
+    background-color: #ddd;
+  }
+  
+  h2 {
+    position: absolute;
+    margin-top :1250px;
+    font-size: 30px;
+    font-weight: bold;
+  }
+  
+  
+  
+  .liste-ingredients .element-1 {
+    position: absolute;
+    width: 305px;
+    height: 427px;
+    top: 0;
+    left: 0;
+    background-color: var(--neutral-01);
+    border-radius: 12px;
+    border: 1.5px solid;
+    border-color: var(--neutral-03);
+  }
+  
+  
+  
+  .liste-ingredients .mask-group-5 {
+    position: absolute;
+    width: 305px;
+    height: 230px;
+    top: -2px;
+    left: -2px;
+  }
+  
+  .liste-ingredients .text {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    position: absolute;
+    top: 258px;
+    left: 28px;
+  }
+  
+  .liste-ingredients .text-wrapper-4 {
+    position: relative;
+    width: fit-content;
+    margin-top: -1px;
+    font-family: var(--body-20px-bold-font-family);
+    font-weight: var(--body-20px-bold-font-weight);
+    color: #2b2e23;
+    font-size: var(--body-20px-bold-font-size);
+    text-align: center;
+    letter-spacing: var(--body-20px-bold-letter-spacing);
+    line-height: var(--body-20px-bold-line-height);
+    white-space: nowrap;
+    font-style: var(--body-20px-bold-font-style);
+  }
+  
+  .liste-ingredients .element-2 {
+    position: absolute;
+    width: 305px;
+    height: 427px;
+    top: 0;
+    left: 329px;
+    background-color: var(--neutral-01);
+    border-radius: 12px;
+    border: 1.5px solid;
+    border-color: var(--neutral-03);
+  }
+  
+  .liste-ingredients .element-3 {
+    position: absolute;
+    width: 305px;
+    height: 427px;
+    top: 0;
+    left: 658px;
+    background-color: var(--neutral-01);
+    border-radius: 12px;
+    border: 1.5px solid;
+    border-color: var(--neutral-03);
+  }
+  
+  .liste-ingredients .element-4 {
+    position: absolute;
+    width: 305px;
+    height: 427px;
+    top: 0;
+    left: 986px;
+    background-color: var(--neutral-01);
+    border-radius: 12px;
+    border: 1.5px solid;
+    border-color: var(--neutral-03);
+  }
+  
+  .liste-ingredients .overlap-4 {
+    position: absolute;
+    width: 634px;
+    height: 427px;
+    top: 451px;
+    left: 0;
+  }
+  
+  .liste-ingredients .element-6 {
+    position: absolute;
+    width: 387px;
+    height: 427px;
+    top: 0;
+    left: 247px;
+  }
+  
+  .liste-ingredients .overlap-group-2 {
+    position: absolute;
+    width: 305px;
+    height: 427px;
+    top: 0;
+    left: 82px;
+    background-color: var(--neutral-01);
+    border-radius: 12px;
+    border: 1.5px solid;
+    border-color: var(--neutral-03);
+  }
+  
+  
+  
+  .liste-ingredients .text-wrapper-5 {
+    width: 26px;
+    top: 263px;
+    left: 255px;
+    position: absolute;
+    font-family: var(--body-16px-regular-font-family);
+    font-weight: var(--body-16px-regular-font-weight);
+    color: #000000;
+    font-size: var(--body-16px-regular-font-size);
+    text-align: center;
+    letter-spacing: var(--body-16px-regular-letter-spacing);
+    line-height: var(--body-16px-regular-line-height);
+    white-space: nowrap;
+    font-style: var(--body-16px-regular-font-style);
+  }
+  
+  .liste-ingredients .element-5 {
+    position: absolute;
+    width: 305px;
+    height: 427px;
+    top: 451px;
+    left: 0px;
+    background-color: var(--neutral-01);
+    border-radius: 12px;
+    border: 1.5px solid;
+    border-color: var(--neutral-03);
+  }
+  
+  .liste-ingredients .element-6 {
+    position: absolute;
+    width: 305px;
+    height: 427px;
+    top: 451px;
+    left: 330px;
+    background-color: var(--neutral-01);
+    border-radius: 12px;
+    border: 1.5px solid;
+    border-color: var(--neutral-03);
+  }
+  
+  
+  .liste-ingredients .element-7 {
+    position: absolute;
+    width: 305px;
+    height: 427px;
+    top: 451px;
+    left: 658px;
+    background-color: var(--neutral-01);
+    border-radius: 12px;
+    border: 1.5px solid;
+    border-color: var(--neutral-03);
+  }
+  
+  .liste-ingredients .element-8 {
+    position: absolute;
+    width: 305px;
+    height: 427px;
+    top: 451px;
+    left: 986px;
+    background-color: var(--neutral-01);
+    border-radius: 12px;
+    border: 1.5px solid;
+    border-color: var(--neutral-03);
+  }
+  
+  
+  .liste-ingredients .text-wrapper-6 {
+    width: 26px;
+    top: 711px;
+    left: 1240px;
+    position: absolute;
+    font-family: var(--body-16px-regular-font-family);
+    font-weight: var(--body-16px-regular-font-weight);
+    color: #000000;
+    font-size: var(--body-16px-regular-font-size);
+    text-align: center;
+    letter-spacing: var(--body-16px-regular-letter-spacing);
+    line-height: var(--body-16px-regular-line-height);
+    white-space: nowrap;
+    font-style: var(--body-16px-regular-font-style);
+  }
+  
+  .liste-ingredients .title {
+    display: flex;
+    width: 943px;
+    height: 194px;
+    gap: 50px;
+    position: absolute;
+    top: 0;
+    left: 168px;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .liste-ingredients .div-wrapper {
+    display: inline-flex;
+    gap: 20px;
+    position: relative;
+    flex: 0 0 auto;
+    flex-direction: column;
+    align-items: center;
+    font-size: 100px;
+    
+  }
+  
+  .liste-ingredients .text-wrapper-7 {
+    font-family: var(--headline-h1-font-family);
+    font-weight: var(--headline-h1-font-weight);
+    font-size: var(--headline-h1-font-size);
+    text-align: center;
+    line-height: var(--headline-h1-line-height);
+    position: relative;
+    width: fit-content;
+    margin-top: -1px;
+    color: #2b2e23;
+    letter-spacing: var(--headline-h1-letter-spacing);
+    white-space: nowrap;
+    font-style: var(--headline-h1-font-style);
+  }
+  
+  .liste-ingredients .button {
+    display: inline-flex;
+    align-items: flex-start;
+    gap: 15px;
+    position: relative;
+    flex: 0 0 auto;
+    margin-bottom: -0.31px;
+  }
+  
+  .liste-ingredients .button-base {
+    display: flex;
+    width: 120px;
+    height: 48px;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    position: relative;
+    background-color: #ad343e;
+    border-radius: 50px;
+  }
+  
+  .liste-ingredients .button-2 {
+    all: unset;
+    box-sizing: border-box;
+    position: relative;
+    width: fit-content;
+    font-family: var(--body-16px-bold-font-family);
+    font-weight: var(--body-16px-bold-font-weight);
+    color: var(--neutral-01);
+    font-size: var(--body-16px-bold-font-size);
+    text-align: center;
+    letter-spacing: var(--body-16px-bold-letter-spacing);
+    line-height: var(--body-16px-bold-line-height);
+    white-space: nowrap;
+    font-style: var(--body-16px-bold-font-style);
+  }
+  
+  .liste-ingredients .button-base-2 {
+    display: flex;
+    width: 150px;
+    height: 48px;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    position: relative;
+    border-radius: 50px;
+    border: 1px solid;
+    border-color: var(--neutral-03);
+  }
+  
+  .liste-ingredients .button-3 {
+    all: unset;
+    box-sizing: border-box;
+    position: relative;
+    width: fit-content;
+    font-family: var(--body-16px-bold-font-family);
+    font-weight: var(--body-16px-bold-font-weight);
+    color: #2b2e23;
+    font-size: var(--body-16px-bold-font-size);
+    text-align: center;
+    letter-spacing: var(--body-16px-bold-letter-spacing);
+    line-height: var(--body-16px-bold-line-height);
+    white-space: nowrap;
+    font-style: var(--body-16px-bold-font-style);
+  }
+  
+  
+  .liste-ingredients .text-wrapper-8 {
+    width: 17px;
+    top: 881px;
+    left: 1064px;
+    position: absolute;
+    font-family: var(--body-16px-regular-font-family);
+    font-weight: var(--body-16px-regular-font-weight);
+    color: #000000;
+    font-size: var(--body-16px-regular-font-size);
+    text-align: center;
+    letter-spacing: var(--body-16px-regular-letter-spacing);
+    line-height: var(--body-16px-regular-line-height);
+    white-space: nowrap;
+    font-style: var(--body-16px-regular-font-style);
+  }
+  
+  
+  
+  .liste-ingredients .text-wrapper-9 {
+    width: 17px;
+    top: 881px;
+    left: 1279px;
+    position: absolute;
+    font-family: var(--body-16px-regular-font-family);
+    font-weight: var(--body-16px-regular-font-weight);
+    color: #000000;
+    font-size: var(--body-16px-regular-font-size);
+    text-align: center;
+    letter-spacing: var(--body-16px-regular-letter-spacing);
+    line-height: var(--body-16px-regular-line-height);
+    white-space: nowrap;
+    font-style: var(--body-16px-regular-font-style);
+  }
+  
+  .liste-ingredients .text-wrapper-10 {
+    width: 17px;
+    top: 878px;
+    left: 1489px;
+    position: absolute;
+    font-family: var(--body-16px-regular-font-family);
+    font-weight: var(--body-16px-regular-font-weight);
+    color: #000000;
+    font-size: var(--body-16px-regular-font-size);
+    text-align: center;
+    letter-spacing: var(--body-16px-regular-letter-spacing);
+    line-height: var(--body-16px-regular-line-height);
+    white-space: nowrap;
+    font-style: var(--body-16px-regular-font-style);
+  }
+  
+  
+  
+  
+  .liste-ingredients .text-wrapper-13 {
+    width: 26px;
+    top: 875px;
+    left: 436px;
+    position: absolute;
+    font-family: var(--body-16px-regular-font-family);
+    font-weight: var(--body-16px-regular-font-weight);
+    color: #000000;
+    font-size: var(--body-16px-regular-font-size);
+    text-align: center;
+    letter-spacing: var(--body-16px-regular-letter-spacing);
+    line-height: var(--body-16px-regular-line-height);
+    white-space: nowrap;
+    font-style: var(--body-16px-regular-font-style);
+  }
+  
+  .liste-ingredients .image {
+    position: absolute;
+    width: 488px;
+    height: 556px;
+    top: 1549px;
+    left: 562px;
+    object-fit: cover;
+  }
+  
+  
+  /* Style général */
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  h2 {
+    color: #333;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  th {
+    background-color: #ad1b1b;
+  }
+  
+  /* Style des cases à cocher */
+  input[type="checkbox"] {
+    transform: scale(1.5); /* Pour agrandir les cases à cocher */
+  }
+  
+  /* Style des cases cochées */
+  input[type="checkbox"]:checked + label::before {
+    content: "\2714"; /* Symbole de check */
+    color: #55b055; /* Couleur verte */
+    font-size: 20px;
+  }
+  
+  /* Style des étiquettes associées aux cases à cocher */
+  label {
+    cursor: pointer;
+  }
+  
+  /* Hover sur les étiquettes */
+  label:hover {
+    color: #007bff; /* Couleur bleue */
+  }
+  
