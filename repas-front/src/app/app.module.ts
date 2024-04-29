@@ -9,6 +9,11 @@ import { HomeComponent } from './home/home.component';
 import { UtilisateurComponent } from './utilisateur/utilisateur.component';
 import { LoginComponent } from './login/login.component';
 import { ContactComponent } from './contact/contact.component';
+import { InscriptionComponent } from './inscription/inscription.component';
+import { DessertComponent } from './dessert/dessert.component';
+import { BoissonComponent } from './boisson/boisson.component';
+import { EntreeComponent } from './entree/entree.component';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +21,12 @@ import { ContactComponent } from './contact/contact.component';
     HomeComponent,
     UtilisateurComponent,
     LoginComponent,
-    ContactComponent
+    ContactComponent,
+    InscriptionComponent,
+    DessertComponent,
+    BoissonComponent,
+    EntreeComponent,
+    AboutComponent
     
   ],
   imports: [
