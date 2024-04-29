@@ -640,6 +640,24 @@
   top: 0;
 }
 
+/************************ modif pour accueil et se connecter */
+.sign-up .div-wrapper {
+  /* Supprimer la couleur de fond */
+  background-color: transparent;
+}
+
+.sign-up .menu-6 {
+  /* Ajouter un arrière-plan ovale à Se Connecter */
+  background-color: #dbdfd0;
+  border-radius: 34px;
+}
+
+.sign-up .menu-6:hover {
+  /* Style hover pour Se Connecter */
+  background-color: #a0a39a; /* Changer la couleur de fond au survol */
+}
+/*****************/
+
 .sign-up .text-wrapper-8 {
   position: relative;
   width: fit-content;

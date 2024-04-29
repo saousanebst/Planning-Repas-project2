@@ -743,7 +743,23 @@
   position: absolute;
   top: 0;
 }
+/****************** modif Accueil et about **********/
+.entres .div-wrapper {
+  /* Supprimer la couleur de fond */
+  background-color: transparent;
+}
 
+.entres .menu-2 {
+  /* Ajouter un arrière-plan ovale à A Propos */
+  background-color: #dbdfd0;
+  border-radius: 34px;
+}
+
+.entres .menu-2:hover {
+  /* Style hover pour A Propos */
+  background-color: #a0a39a; /* Changer la couleur de fond au survol */
+}
+/*********************/
 .entres .text-wrapper-8 {
   position: relative;
   width: fit-content;

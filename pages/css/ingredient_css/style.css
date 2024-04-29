@@ -893,6 +893,24 @@ h2 {
   top: 0;
 }
 
+/****************** modif Accueil et about **********/
+.liste-ingredients .menu-2 {
+  /* Supprimer la couleur de fond */
+  background-color: transparent;
+}
+
+.liste-ingredients .menu-6 {
+  /* Ajouter un arrière-plan ovale à A Propos */
+  background-color: #dbdfd0;
+  border-radius: 34px;
+}
+
+.liste-ingredients .menu-6:hover {
+  /* Style hover pour A Propos */
+  background-color: #a0a39a; /* Changer la couleur de fond au survol */
+}
+/*********************/
+
 .liste-ingredients .text-wrapper-12 {
   position: relative;
   width: fit-content;
@@ -948,7 +966,7 @@ h2 {
   justify-content: center;
   gap: 10px;
   padding: 4px 16px;
-  left: 331px;
+  left: 340px;
   border-radius: 34px;
   position: absolute;
   top: 0;
@@ -960,7 +978,7 @@ h2 {
   justify-content: center;
   gap: 10px;
   padding: 4px 16px;
-  left: 433px;
+  left: 450px;
   border-radius: 34px;
   position: absolute;
   top: 0;
