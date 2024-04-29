@@ -1,0 +1,834 @@
+.login {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .login .div {
+    background-color: #ffffff;
+    width: 1600px;
+    height: 2159px;
+    position: relative;
+  }
+  
+  .login .footer {
+    position: absolute;
+    width: 1600px;
+    height: 778px;
+    top: 1381px;
+    left: 0;
+    background-color: transparent;
+  }
+  
+  .login .overlap-group {
+    position: relative;
+    width: 1600px;
+    height: 778px;
+    top: -7px;
+    left: 10px;
+    background-color: #474747;
+  }
+  
+  .login .content {
+    position: absolute;
+    width: 1314px;
+    height: 422px;
+    top: 210px;
+    left: 143px;
+  }
+  
+  .login .bottom {
+    position: absolute;
+    width: 1314px;
+    height: 1px;
+    top: 421px;
+    left: 0;
+    background-image: url(./img/line-311.svg);
+    background-size: cover;
+    background-position: 50% 50%;
+  }
+  
+  .login .top {
+    display: flex;
+    width: 566px;
+    align-items: flex-start;
+    justify-content: space-between;
+    left: 105px;
+    position: absolute;
+    top: 0;
+  }
+  
+  .login .col {
+    flex-direction: column;
+    gap: 30px;
+    position: relative;
+    flex: 0 0 auto;
+    display: inline-flex;
+    align-items: flex-start;
+  }
+  
+  .login .logo {
+    position: relative;
+    width: 78px;
+    height: 70px;
+    object-fit: cover;
+  }
+  
+  .login .social {
+    display: inline-flex;
+    align-items: flex-start;
+    gap: 12px;
+    position: relative;
+    flex: 0 0 auto;
+  }
+  
+  .login .element {
+    position: relative;
+    width: 35px;
+    height: 35px;
+    background-color: #ad343e;
+    border-radius: 17.5px;
+  }
+  
+  .login .logo-twitter {
+    position: absolute;
+    width: 14px;
+    height: 11px;
+    top: 12px;
+    left: 11px;
+  }
+  
+  .login .logo-fb-simple {
+    position: absolute;
+    width: 8px;
+    height: 15px;
+    top: 10px;
+    left: 14px;
+  }
+  
+  .login .logo-instagram {
+    position: absolute;
+    width: 17px;
+    height: 17px;
+    top: 9px;
+    left: 9px;
+  }
+  
+  .login .logo-github {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: 9px;
+    left: 10px;
+  }
+  
+  .login .original-logo-wrapper {
+    position: relative;
+    width: 211.83px;
+    height: 49px;
+  }
+  
+  .login .original-logo {
+    position: relative;
+    width: 212px;
+    height: 49px;
+  }
+  
+  .login .cuisine {
+    top: 4px;
+    left: 48px;
+    color: #ffffff;
+    font-size: 32.7px;
+    position: absolute;
+    font-family: "Playfair Display", Helvetica;
+    font-weight: 600;
+    font-style: italic;
+    letter-spacing: -0.4px;
+    line-height: 29.3px;
+    white-space: nowrap;
+  }
+  
+  .login .col-2 {
+    gap: 120px;
+    position: relative;
+    flex: 0 0 auto;
+    display: inline-flex;
+    align-items: flex-start;
+  }
+  
+  .login .div-2 {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
+    position: relative;
+    flex: 0 0 auto;
+  }
+  
+  .login .text-wrapper {
+    position: relative;
+    width: fit-content;
+    margin-top: -1px;
+    font-family: var(--body-16px-bold-font-family);
+    font-weight: var(--body-16px-bold-font-weight);
+    color: #ffffff;
+    font-size: var(--body-16px-bold-font-size);
+    letter-spacing: var(--body-16px-bold-letter-spacing);
+    line-height: var(--body-16px-bold-line-height);
+    white-space: nowrap;
+    font-style: var(--body-16px-bold-font-style);
+  }
+  
+  .login .list {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    position: relative;
+    flex: 0 0 auto;
+  }
+  
+  .login .text-wrapper-2 {
+    position: relative;
+    width: fit-content;
+    margin-top: -1px;
+    font-family: var(--body-16px-regular-font-family);
+    font-weight: var(--body-16px-regular-font-weight);
+    color: var(--neutral-03);
+    font-size: var(--body-16px-regular-font-size);
+    letter-spacing: var(--body-16px-regular-letter-spacing);
+    line-height: var(--body-16px-regular-line-height);
+    white-space: nowrap;
+    font-style: var(--body-16px-regular-font-style);
+  }
+  
+  .login .text-wrapper-3 {
+    position: relative;
+    width: fit-content;
+    font-family: var(--body-16px-regular-font-family);
+    font-weight: var(--body-16px-regular-font-weight);
+    color: var(--neutral-03);
+    font-size: var(--body-16px-regular-font-size);
+    letter-spacing: var(--body-16px-regular-letter-spacing);
+    line-height: var(--body-16px-regular-line-height);
+    white-space: nowrap;
+    font-style: var(--body-16px-regular-font-style);
+  }
+  
+  .login .col-3 {
+    flex-direction: column;
+    gap: 40px;
+    position: absolute;
+    top: 210px;
+    left: 1026px;
+    display: inline-flex;
+    align-items: flex-start;
+  }
+  
+  .login .p {
+    position: relative;
+    width: 299px;
+    height: 32px;
+    margin-top: -1px;
+    font-family: var(--body-16px-bold-font-family);
+    font-weight: var(--body-16px-bold-font-weight);
+    color: #ffffff;
+    font-size: var(--body-16px-bold-font-size);
+    letter-spacing: var(--body-16px-bold-letter-spacing);
+    line-height: var(--body-16px-bold-line-height);
+    font-style: var(--body-16px-bold-font-style);
+  }
+  
+  .login .img {
+    position: relative;
+    width: 403px;
+    height: 355px;
+  }
+  
+  .login .mask-group {
+    position: absolute;
+    width: 194px;
+    height: 170px;
+    top: 0;
+    left: 0;
+  }
+  
+  .login .mask-group-2 {
+    top: 0;
+    left: 209px;
+    position: absolute;
+    width: 194px;
+    height: 170px;
+  }
+  
+  .login .mask-group-3 {
+    top: 185px;
+    left: 0;
+    position: absolute;
+    width: 194px;
+    height: 170px;
+  }
+  
+  .login .mask-group-4 {
+    top: 185px;
+    left: 209px;
+    position: absolute;
+    width: 194px;
+    height: 170px;
+  }
+  
+  .login .hero {
+    position: absolute;
+    width: 1600px;
+    height: 1037px;
+    top: 0;
+    left: 0;
+  }
+  
+  .login .overlap {
+    position: relative;
+    height: 1037px;
+  }
+  
+  .login .bg {
+    position: absolute;
+    width: 1600px;
+    height: 740px;
+    top: 0;
+    left: 0;
+    background-color: var(--neutral-02);
+  }
+  
+  .login .hero-2 {
+    position: absolute;
+    width: 1041px;
+    height: 828px;
+    top: 209px;
+    left: 272px;
+  }
+  
+  .login .title {
+    flex-direction: column;
+    gap: 24px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: inline-flex;
+    align-items: center;
+  }
+  
+  .login .nous-sommes-heureux {
+    position: relative;
+    width: fit-content;
+    margin-top: -1px;
+    font-family: var(--headline-h1-font-family);
+    font-weight: var(--headline-h1-font-weight);
+    color: #2b2e23;
+    font-size: var(--headline-h1-font-size);
+    text-align: center;
+    letter-spacing: var(--headline-h1-letter-spacing);
+    line-height: var(--headline-h1-line-height);
+    font-style: var(--headline-h1-font-style);
+  }
+  
+  .login .form {
+    display: inline-flex;
+    flex-direction: column;
+    height: 586px;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 40px;
+    position: absolute;
+    top: 242px;
+    left: 122px;
+    background-color: #ffffff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: var(--2);
+  }
+  
+  .login .box {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    gap: 24px;
+    position: relative;
+    flex: 0 0 auto;
+  }
+  
+  .login .row {
+    display: flex;
+    width: 717px;
+    align-items: flex-end;
+    gap: 24px;
+    position: relative;
+    flex: 0 0 auto;
+  }
+  
+  .login .element-2 {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    position: relative;
+    flex: 0 0 auto;
+  }
+  
+  .login .div-wrapper {
+    gap: 10px;
+    position: relative;
+    flex: 0 0 auto;
+    display: inline-flex;
+    align-items: center;
+  }
+  
+  .login .text-wrapper-4 {
+    position: relative;
+    width: fit-content;
+    margin-top: -1px;
+    font-family: var(--body-16px-bold-font-family);
+    font-weight: var(--body-16px-bold-font-weight);
+    color: #2b2e23;
+    font-size: var(--body-16px-bold-font-size);
+    letter-spacing: var(--body-16px-bold-letter-spacing);
+    line-height: var(--body-16px-bold-line-height);
+    white-space: nowrap;
+    font-style: var(--body-16px-bold-font-style);
+  }
+  
+  .login .button-base {
+    display: flex;
+    width: 350px;
+    height: 60px;
+    align-items: center;
+    gap: 10px;
+    padding: 0px 24px;
+    position: relative;
+    background-color: #ffffff;
+    border-radius: 72px;
+    border: 1px solid;
+    border-color: var(--neutral-03);
+  }
+  
+  .login .text-wrapper-5 {
+    position: relative;
+    width: fit-content;
+    font-family: var(--body-16px-regular-font-family);
+    font-weight: var(--body-16px-regular-font-weight);
+    color: var(--neutral-05);
+    font-size: var(--body-16px-regular-font-size);
+    text-align: center;
+    letter-spacing: var(--body-16px-regular-letter-spacing);
+    line-height: var(--body-16px-regular-line-height);
+    white-space: nowrap;
+    font-style: var(--body-16px-regular-font-style);
+  }
+  
+  .login .element-3 {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    position: relative;
+    flex: 0 0 auto;
+    margin-right: -7px;
+  }
+  
+  .login .button {
+    all: unset;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px 32px;
+    position: relative;
+    align-self: stretch;
+    width: 100%;
+    flex: 0 0 auto;
+    background-color: #ad343e;
+    border-radius: 118px;
+  }
+  
+  .login .get-started-now {
+    position: relative;
+    width: fit-content;
+    margin-top: -1px;
+    font-family: "DM Sans", Helvetica;
+    font-weight: 700;
+    color: var(--neutral-01);
+    font-size: 24px;
+    text-align: right;
+    letter-spacing: 0;
+    line-height: 24px;
+    white-space: nowrap;
+  }
+  
+  .login .je-n-ai-pas-de {
+    position: relative;
+    width: 717px;
+    height: 77px;
+    font-family: "DM Sans", Helvetica;
+    font-weight: 700;
+    color: #2b2e23;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: 24px;
+  }
+  
+  .login .header {
+    position: absolute;
+    width: 1600px;
+    height: 129px;
+    top: 0;
+    left: 0;
+  }
+  
+  .login .top-bar {
+    width: 1600px;
+    height: 45px;
+    left: 0;
+    background-color: #474747;
+    position: absolute;
+    top: 0;
+  }
+  
+  .login .social-2 {
+    display: inline-flex;
+    align-items: flex-start;
+    gap: 4px;
+    position: absolute;
+    top: 9px;
+    left: 1325px;
+  }
+  
+  .login .img-wrapper {
+    position: relative;
+    width: 27.17px;
+    height: 27.17px;
+    background-color: #f8f8f61f;
+    border-radius: 13.59px;
+  }
+  
+  .login .logo-twitter-2 {
+    position: absolute;
+    width: 11px;
+    height: 9px;
+    top: 10px;
+    left: 9px;
+  }
+  
+  .login .logo-fb-simple-2 {
+    position: absolute;
+    width: 6px;
+    height: 12px;
+    top: 8px;
+    left: 11px;
+  }
+  
+  .login .logo-instagram-2 {
+    position: absolute;
+    width: 13px;
+    height: 13px;
+    top: 7px;
+    left: 7px;
+  }
+  
+  .login .logo-github-2 {
+    position: absolute;
+    width: 13px;
+    height: 12px;
+    top: 7px;
+    left: 8px;
+  }
+  
+  .login .info {
+    display: inline-flex;
+    align-items: flex-start;
+    gap: 25px;
+    position: absolute;
+    top: 11px;
+    left: 150px;
+  }
+  
+  .login .div-3 {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    position: relative;
+    flex: 0 0 auto;
+  }
+  
+  .login .img-2 {
+    position: relative;
+    width: 18px;
+    height: 18px;
+  }
+  
+  .login .text-wrapper-6 {
+    position: relative;
+    width: fit-content;
+    margin-top: -1px;
+    font-family: var(--body-16px-regular-font-family);
+    font-weight: var(--body-16px-regular-font-weight);
+    color: var(--neutral-02);
+    font-size: var(--body-16px-regular-font-size);
+    letter-spacing: var(--body-16px-regular-letter-spacing);
+    line-height: var(--body-16px-regular-line-height);
+    white-space: nowrap;
+    font-style: var(--body-16px-regular-font-style);
+  }
+  
+  .login .overlap-2 {
+    position: absolute;
+    width: 1467px;
+    height: 74px;
+    top: 55px;
+    left: 111px;
+  }
+  
+  .login .header-2 {
+    position: absolute;
+    width: 1293px;
+    height: 55px;
+    top: 19px;
+    left: 40px;
+  }
+  
+  .login .logo-2 {
+    position: absolute;
+    width: 183px;
+    height: 39px;
+    top: 8px;
+    left: 28px;
+  }
+  
+  .login .original-logo-2 {
+    position: relative;
+    height: 39px;
+  }
+  
+  .login .cuisine-2 {
+    top: 3px;
+    left: 41px;
+    color: #474747;
+    font-size: 42.7px;
+    position: absolute;
+    font-family: "Playfair Display", Helvetica;
+    font-weight: 600;
+    font-style: italic;
+    letter-spacing: -0.4px;
+    line-height: 29.3px;
+    white-space: nowrap;
+  }
+  
+  .login .menu {
+    width: 569px;
+    height: 32px;
+    left: 568px;
+    position: absolute;
+    top: 0;
+  }
+  
+  .login .overlap-group-2 {
+    position: relative;
+    height: 32px;
+  }
+  
+  .login .menu-2 {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 4px 16px;
+    left: 0;
+    background-color: #dbdfd0;
+    border-radius: 34px;
+    position: absolute;
+    top: 0;
+  }
+  
+  /***** correction pour accueil et se connecter */
+  .login .menu-2 {
+    /* Supprimer la couleur de fond */
+    background-color: transparent;
+  }
+  
+  .login .menu-7 {
+    /* Ajouter un arrière-plan ovale à Se Connecter */
+    background-color: #dbdfd0;
+    border-radius: 34px;
+  }
+  
+  .login .menu-7:hover {
+    /* Style hover pour Se Connecter */
+    background-color: #a0a39a; /* Changer la couleur de fond au survol */
+  }
+  /*************************************/
+  
+  
+  .login .text-wrapper-7 {
+    position: relative;
+    width: fit-content;
+    margin-top: -1px;
+    font-family: var(--body-16px-medium-font-family);
+    font-weight: var(--body-16px-medium-font-weight);
+    color: #2b2e23;
+    font-size: var(--body-16px-medium-font-size);
+    letter-spacing: var(--body-16px-medium-letter-spacing);
+    line-height: var(--body-16px-medium-line-height);
+    white-space: nowrap;
+    font-style: var(--body-16px-medium-font-style);
+  }
+  
+  .login .menu-3 {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 4px 16px;
+    left: 85px;
+    border-radius: 34px;
+    position: absolute;
+    top: 0;
+  }
+  
+  .login .menu-4 {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 4px 16px;
+    left: 172px;
+    border-radius: 34px;
+    position: absolute;
+    top: 0;
+  }
+  
+  .login .menu-5 {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 4px 16px;
+    left: 254px;
+    border-radius: 34px;
+    position: absolute;
+    top: 0;
+  }
+  
+  .login .menu-6 {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 4px 16px;
+    left: 331px;
+    border-radius: 34px;
+    position: absolute;
+    top: 0;
+  }
+  
+  .login .menu-7 {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 4px 16px;
+    left: 433px;
+    border-radius: 34px;
+    position: absolute;
+    top: 0;
+  }
+  /*
+  .login .button-wrapper {
+    all: unset;
+    box-sizing: border-box;
+    position: absolute;
+    width: 264px;
+    height: 48px;
+    top: 11px;
+    left: 1203px;
+  }
+  
+  .login .button-2 {
+    all: unset;
+    box-sizing: border-box;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 12px 24px;
+    position: relative;
+    border-radius: 118px;
+    border: 1.5px solid;
+    border-color: #2b2e23;
+  }
+  */
+  
+  /******************correction boutton */
+  #button-wrapper {
+    all: unset;
+    box-sizing: border-box;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 12px 24px;
+    position: absolute;
+    width: 264px;
+    height: 48px;
+    top: 11px;
+    left: 1203px;
+    border-radius: 118px;
+    border: 1.5px solid #2b2e23;
+  }
+  
+  #button-wrapper .img-3 {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  #button-wrapper .get-started-now {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #2b2e23;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+   /*********************************/
+  
+  .login .img-3 {
+    position: relative;
+    width: 16px;
+    height: 16px;
+  }
+  
+  .login .get-started-now-2 {
+    position: relative;
+    width: fit-content;
+    margin-top: -1.5px;
+    font-family: var(--body-16px-bold-font-family);
+    font-weight: var(--body-16px-bold-font-weight);
+    color: var(--neutral-07);
+    font-size: var(--body-16px-bold-font-size);
+    text-align: right;
+    letter-spacing: var(--body-16px-bold-letter-spacing);
+    line-height: var(--body-16px-bold-line-height);
+    white-space: nowrap;
+    font-style: var(--body-16px-bold-font-style);
+  }
+  
+  .login .logo-3 {
+    position: absolute;
+    width: 78px;
+    height: 70px;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+  }
+  
