@@ -8,7 +8,9 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonView;
@@ -28,21 +30,19 @@ public class Recette {
 	@JsonView(Views.Common.class)
 	private String nom;
 	
-	@OneToMany
-	@JsonView(Views.RecetteWithIngredient.class)
-	private List <Ingredient> ingredients = new ArrayList();
 	
+	@OneToMany(mappedBy="recette")
+	@JsonView(Views.Recette.class)
+	private List<Instruction> instructions = new ArrayList();
 	
 	
 	public Recette() {
 	}
 
-	public Recette(String nom, List<Ingredient> ingredients) {
+	public Recette(String nom) {
 		this.nom = nom;
-		this.ingredients = ingredients;
+	
 	}
-
-
 
 	public Integer getId() {
 		return id;
@@ -60,17 +60,17 @@ public class Recette {
 		this.nom = nom;
 	}
 
-	public List<Ingredient> getIngredients() {
-		return ingredients;
+	public List<Instruction> getInstructions() {
+		return instructions;
 	}
 
-	public void setIngredients(List<Ingredient> ingredients) {
-		this.ingredients = ingredients;
+	public void setInstructions(List<Instruction> instructions) {
+		this.instructions = instructions;
 	}
 
 	@Override
 	public String toString() {
-		return "Recette [id=" + id + ", nom=" + nom + ", ingredients=" + ingredients + "]";
+		return "Recette [id=" + id + ", nom=" + nom + ", instructions=" + instructions + "]";
 	}
 	
 }
