@@ -75,6 +75,5 @@ public class AdministrateurRestController {
 		public void supprimerAdministrateur(@PathVariable Integer id) 
 		{
 			administrateurSrv.deleteById(id);
-		}
-		
+		}		
 	}

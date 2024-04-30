@@ -25,7 +25,6 @@ import repas.service.IngredientService;
 import repas.view.Views;
 
 
-
 @RestController
 @RequestMapping("/api/ingredient")
 @CrossOrigin("*")

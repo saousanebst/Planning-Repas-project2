@@ -74,6 +74,5 @@ public class RecetteRestController {
 		{
 			recetteSrv.deleteById(id);
 		}
-		
-		
+				
 }

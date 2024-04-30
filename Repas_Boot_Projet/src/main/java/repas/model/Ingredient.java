@@ -34,6 +34,9 @@ public class Ingredient {
 	}
 
 	
+	public Ingredient(String nom) {
+		this.nom = nom;
+	}
 
 	public Integer getId() {
 		return id;
