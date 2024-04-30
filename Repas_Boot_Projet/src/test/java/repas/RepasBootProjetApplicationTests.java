@@ -44,9 +44,6 @@ class RepasBootProjetApplicationTests {
         Recette entree1 = new Recette("Pizza", ingredients);
 		
 		
-		
-		
-		
 	}
 
 }
