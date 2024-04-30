@@ -65,7 +65,7 @@ public class RepasResetController {
 	@JsonView(Views.RepasWithRecette.class)
 	public List<Repas> RepasWithRecette(Integer id) 
 	{
-		return repasSrv.findAllByIngredient(id);
+		return repasSrv.findAllByRecette(id);
 	}
 	
 	

@@ -14,7 +14,7 @@ public interface IDAORepas extends JpaRepository<Repas, Integer>{
 	@Query("from Repas")
 	public List<Repas> findAllRepas();
 	
-	@Query("SELECT r from Repas r join r.recettes rec join rec.ingredients i where i.id=:id")
-	public List<Repas> findAllByIngredient(@Param("id") Integer idIngredient);
+	@Query("SELECT r from Repas r join r.recettes i where i.id=:id")
+	public List<Repas> findAllByRecette(@Param("id") Integer idRepas);
 	
 }

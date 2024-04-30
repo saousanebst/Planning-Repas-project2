@@ -64,9 +64,10 @@ public class RepasService {
 		daoRepas.deleteById(id);
 	}
 	
-	public List<Repas> findAllByIngredient(Integer id)
+	
+	public List<Repas> findAllByRecette(Integer id)
 	{
-	return daoRepas.findAllByIngredient(id);
+		return daoRepas.findAllByRecette(id);
 	}
 	
 	

@@ -14,11 +14,11 @@ public interface IDAOIngredient extends JpaRepository<Ingredient, Integer>{
 
 	public List<Ingredient> findAllByNomContaining(String nom);
 	
-	@Query("select i from Repas r join r.recettes rec join rec.ingredients i where r.id = ?1")
-	public List<Ingredient> findAllByRepas(Integer idRepas);
+	//@Query("select i from Repas r join r.recettes rec join rec.ingredients i where r.id = ?1")
+	//public List<Ingredient> findAllByRepas(Integer idRepas);
 	
 	// coder findAllByInstruction
 	@Query("SELECT r from Ingredient r join r.instructions i where i.id=:id")
-	public List<Instruction> findAllByInstruction(@Param("id") Integer idInstruction);
+	public Ingredient findAllByInstruction(@Param("id") Integer idInstruction);
 	
 }

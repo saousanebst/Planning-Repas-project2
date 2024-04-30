@@ -33,6 +33,7 @@ class RepasBootProjetApplicationTests {
         
         Ingredient ingredient1 = new Ingredient("Pâte à pizza");
         Ingredient ingredient2 = new Ingredient("Sauce tomate");
+        Ingredient ingredient3 = new Ingredient("Fromage rapé");
         
 
         // Ajoutez les ingrédients à la liste
@@ -40,7 +41,8 @@ class RepasBootProjetApplicationTests {
         ingredients.add(ingredient2);
         
         ingredient1 = ingredientSrv.save(ingredient1);
-        
+        ingredient2 = ingredientSrv.save(ingredient2);
+        ingredient3 = ingredientSrv.save(ingredient3);
 
         // Création de la recette avec le nom "Pizza" et la liste d'ingrédients
         Recette entree1 = new Recette("Pizza");
