@@ -62,10 +62,10 @@ public class RecetteRestController {
 			return recetteSrv.update(Recette);
 		}
 		
-		@JsonView(Views.RecetteWithIngredient.class)
-		public List<Recette> RecetteWithIngredient(Integer id) 
+		@JsonView(Views.RecetteWithInstruction.class)
+		public List<Recette> RecetteWithInstruction(Integer id) 
 		{
-			return recetteSrv.getByIdWithIngredients(id);
+			return recetteSrv.getByIdWithInstruction(id);
 		}
 		
 		

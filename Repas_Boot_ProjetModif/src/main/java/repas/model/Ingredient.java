@@ -31,7 +31,7 @@ public class Ingredient {
 	private String nom;
 	
 	@OneToMany(mappedBy="ingredient")
-	@JsonView(Views.Ingredient.class)
+	@JsonView(Views.IngredientWithInstruction.class)
 	private List<Instruction> instructions= new ArrayList();
 	
 	

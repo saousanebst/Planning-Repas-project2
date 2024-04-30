@@ -32,7 +32,7 @@ public class Recette {
 	
 	
 	@OneToMany(mappedBy="recette")
-	@JsonView(Views.Recette.class)
+	@JsonView(Views.RecetteWithInstruction.class)
 	private List<Instruction> instructions = new ArrayList();
 	
 	

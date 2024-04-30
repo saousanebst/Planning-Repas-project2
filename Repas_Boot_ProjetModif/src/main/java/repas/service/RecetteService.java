@@ -68,9 +68,9 @@ public class RecetteService {
 		daoRecette.deleteById(id);
 	}
 	
-	public List<Recette> getByIdWithIngredients(Integer id)
+	public List<Recette> getByIdWithInstruction(Integer id)
 	{
-	return daoRecette.findAllByIngredient(id);
+	return daoRecette.findAllByInstruction(id);
 	}
 	
 	

@@ -10,13 +10,12 @@ public class Views{
 	public class Utilisateur extends Common {}	
 
 	public class Ingredient extends Common {}
-
+	 public class IngredientWithInstruction extends Ingredient{}
 	public class Instruction extends Common {}
 
 	public class Recette extends Common {}
 
-		public class RecetteWithIngredient extends Recette{} //Acces JSON spécifique pour les chargements toMany
-
+         public class RecetteWithInstruction extends Recette{} //Acces JSON spécifique pour les chargements toMany
 	public class Repas extends Common {}
 
 		public class RepasWithRecette extends Repas{} 

@@ -8,6 +8,8 @@ import org.springframework.stereotype.Service;
 
 import repas.dao.IDAOIngredient;
 import repas.model.Ingredient;
+import repas.model.Instruction;
+import repas.model.Recette;
 
 
 @Service
@@ -63,5 +65,8 @@ public class IngredientService {
 	}
 	
 	
-	
+	public List<Instruction> getByIdWithInstruction(Integer id)
+	{
+	return daoIngredient.findAllByInstruction(id);
+	}
 }

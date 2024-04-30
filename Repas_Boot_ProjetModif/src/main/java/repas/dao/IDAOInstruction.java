@@ -8,10 +8,12 @@ import org.springframework.data.repository.query.Param;
 
 
 import repas.model.Instruction;
+import repas.model.Recette;
 
 public interface IDAOInstruction extends JpaRepository<Instruction, Integer>{
 
-//	@Query("SELECT i from Instruction i where i.ingredient.id=:id")
-//	public List<Instruction> findAllByIngredient(@Param("id") Integer idIngredient);
-	
+@Query("SELECT i from Instruction i where i.instruction.id=:id")
+public List<Instruction> findAllByInstruction(@Param("id") Integer idInstruction);
+
+
 }
