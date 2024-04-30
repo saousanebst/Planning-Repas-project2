@@ -7,7 +7,10 @@
     <!--<dessert></dessert>-->
     <!--<boisson></boisson>-->
     <!--<entree></entree>-->
-    <about></about>
+    <!--<about></about>-->
+
+    <router-outlet></router-outlet>
+
       <div class="header">
         <div class="top-bar">
           <div class="social">
@@ -35,12 +38,35 @@
             </div>
             <div class="menu-2">
               <div class="overlap-group-3">
-                <div class="menu-3"><div class="text-wrapper-10">Accueil</div></div>
-                <div class="menu-4"><div class="text-wrapper-10">Recettes</div></div>
-                <div class="menu-5"><div class="text-wrapper-10">A Propos</div></div>
-                <div class="menu-6"><div class="text-wrapper-10">Contact</div></div>
-                <div class="menu-7"><div class="text-wrapper-10">IngrÃ©dients</div></div>
-                <div class="menu-8"><div class="text-wrapper-10">Se Connecter</div></div>
+                <div class="menu-3">
+                  <div class="text-wrapper-10" >
+                    <button [routerLink]="['/home']" routerLinkActive="active">Accueil</button></div>
+                </div>
+                <div class="menu-4">
+                  <div class="text-wrapper-10">
+                    <button *ngIf="isLogged()" [routerLink]="['/entree']" routerLinkActive="active">Recettes</button>
+                    </div>
+                </div>
+                <div class="menu-5">
+                  <div class="text-wrapper-10">
+                    <button [routerLink]="['/about']" routerLinkActive="active">Propos</button>
+                  </div>
+                </div>
+                <div class="menu-6">
+                  <div class="text-wrapper-10">
+                    <button [routerLink]="['/contact']" routerLinkActive="active">Contact</button>
+                    </div>
+                </div>
+                <div class="menu-7">
+                  <div class="text-wrapper-10">
+                      <button *ngIf="isLogged()" [routerLink]="['/ingredient']" routerLinkActive="active">Ingrédients</button>
+                    </div>
+                </div>
+                <div class="menu-8">
+                  <div class="text-wrapper-10">
+                    <button *ngIf="!isLogged()" [routerLink]="['/login']" routerLinkActive="active">Se Connecter</button>
+                    </div>
+                </div>
               </div>
             </div>
           </div>
@@ -75,13 +101,13 @@
               </div>
               <div class="col-2">
                 <div class="col-3">
-                  <div class="text-wrapper-11">Pages</div>
+                  <!--<div class="text-wrapper-11">Pages</div>
                   <div class="list">
-                    <div class="text-wrapper-12">Acceuil</div>
-                    <div class="text-wrapper-13">Recettes</div>
-                    <div class="text-wrapper-13">A propos</div>
-                    <div class="text-wrapper-13">Contact</div>
-                  </div>
+                    <div class="text-wrapper-12" >Accueil</div>
+                    <div class="text-wrapper-13" >Recettes</div>
+                    <div class="text-wrapper-13" >A propos</div>
+                    <div class="text-wrapper-13" >Contact</div>
+                  </div>-->
                 </div>
               </div>
             </div>
