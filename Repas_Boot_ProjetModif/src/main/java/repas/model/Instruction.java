@@ -5,6 +5,9 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonView;
@@ -23,6 +26,17 @@ public class Instruction {
 	@Column(name="quantity_ingredient", nullable=false, length=50)
 	@JsonView(Views.Common.class)
 	private int quantiteIngredient;
+	
+	@ManyToOne
+	@JoinColumn(name="recette")
+	@JsonView(Views.Instruction.class)
+	private Recette recette;
+	
+	@ManyToOne
+	@JoinColumn(name="ingredient")
+	@JsonView(Views.Instruction.class)
+	private Ingredient ingredient;
+	
 	
 	public Instruction() {
 	}

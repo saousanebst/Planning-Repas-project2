@@ -39,9 +39,11 @@ class RepasBootProjetApplicationTests {
         ingredients.add(ingredient1);
         ingredients.add(ingredient2);
         
+        ingredient1 = ingredientSrv.save(ingredient1);
+        
 
         // Création de la recette avec le nom "Pizza" et la liste d'ingrédients
-        Recette entree1 = new Recette("Pizza", ingredients);
+        Recette entree1 = new Recette("Pizza");
 		
 		
 		
