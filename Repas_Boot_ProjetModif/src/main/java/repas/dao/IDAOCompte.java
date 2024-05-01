@@ -20,4 +20,5 @@ public interface IDAOCompte extends JpaRepository<Compte,Integer>{
 	@Query("from Administrateur")
 	public List<Administrateur> findAllAdministrateur();
 
+	
 }
