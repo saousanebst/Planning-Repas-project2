@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'plat,[plat]',
+  selector: 'plat, [plat]',
   templateUrl: './plat.component.html',
   styleUrl: './plat.component.css'
 })

@@ -24,12 +24,12 @@ export class LoginComponent {
     });
 
   }
-
+/*
   connexion() {
     this.authService.login(this.emailCtrl.value, this.passwordCtrl.value);
-  }
+  }*/
 
-  /*connexion() {
+  connexion() {
   this.authService.login(this.emailCtrl.value, this.passwordCtrl.value).subscribe(
     response => {
       // Gérer la réponse de l'API backend (par exemple, rediriger vers la page d'accueil si la connexion réussit)
@@ -41,5 +41,5 @@ export class LoginComponent {
     }
   );
 }
-*/
+
 }

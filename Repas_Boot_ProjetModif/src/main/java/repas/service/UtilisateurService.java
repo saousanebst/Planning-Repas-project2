@@ -122,7 +122,6 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import repas.dao.IDAOCompte;
@@ -136,8 +135,7 @@ public class UtilisateurService {
     @Autowired
     private IDAOCompte daoCompte;
     
-    @Autowired
-    private PasswordEncoder passwordEncoder; // Injectez le bean PasswordEncoder
+   
 
     public Utilisateur getById(Integer id) {
         Optional<Compte> opt = daoCompte.findById(id);

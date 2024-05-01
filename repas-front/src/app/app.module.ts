@@ -15,6 +15,7 @@ import { BoissonComponent } from './boisson/boisson.component';
 import { EntreeComponent } from './entree/entree.component';
 import { AboutComponent } from './about/about.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { PlatComponent } from './plat/plat.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     DessertComponent,
     BoissonComponent,
     EntreeComponent,
-    AboutComponent
+    AboutComponent,
+    PlatComponent
     
   ],
   imports: [

@@ -2,6 +2,8 @@ package repas.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -38,14 +40,25 @@ public class Instruction {
 	private Ingredient ingredient;
 	
 	
+
+	@Enumerated(EnumType.STRING)
+	@Column(columnDefinition = "ENUM('gramme', 'millilitre', 'quantite'",nullable=false)
+	@JsonView(Views.Common.class)
+	private Unite unite;
+	
+	
+	
 	public Instruction() {
 	}
 
-	public Instruction(Integer id, int quantiteIngredient) {
+	public Instruction(Integer id, int quantiteIngredient, Unite unite) {
 		this.id = id;
 		this.quantiteIngredient = quantiteIngredient;
+		this.unite=unite;
 	}
 
+	
+	
 	public Integer getId() {
 		return id;
 	}
@@ -62,9 +75,38 @@ public class Instruction {
 		this.quantiteIngredient = quantiteIngredient;
 	}
 
+	
+	
+	public Recette getRecette() {
+		return recette;
+	}
+
+	public void setRecette(Recette recette) {
+		this.recette = recette;
+	}
+
+	public Ingredient getIngredient() {
+		return ingredient;
+	}
+
+	public void setIngredient(Ingredient ingredient) {
+		this.ingredient = ingredient;
+	}
+
+	public Unite getUnite() {
+		return unite;
+	}
+
+	public void setUnite(Unite unite) {
+		this.unite = unite;
+	}
+
 	@Override
 	public String toString() {
-		return "Instruction [id=" + id + ", quantiteIngredient=" + quantiteIngredient + "]";
+		return "Instruction [id=" + id + ", quantiteIngredient=" + quantiteIngredient + ", recette=" + recette
+				+ ", ingredient=" + ingredient + ", unite=" + unite + "]";
 	}
+
+
 	
 }

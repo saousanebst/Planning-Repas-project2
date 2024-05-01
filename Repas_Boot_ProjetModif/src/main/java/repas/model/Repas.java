@@ -6,6 +6,8 @@ import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -34,18 +36,36 @@ public class Repas {
 	private List <Recette> recettes = new ArrayList<>();
 	
 	
+
+	@Enumerated(EnumType.STRING)
+	@Column(columnDefinition = "ENUM('Petit_déjeuner', 'Déjeuner', 'Goûter', 'Dîner'",nullable=false)
+	@JsonView(Views.Common.class)
+	private Creneau creneau;
+	
+	
 	public Repas() {
 	}
 
 
-	public Repas(Integer id, List<Recette> recettes, LocalDate dateDebut) {
+	public Repas(Integer id, List<Recette> recettes, LocalDate dateDebut, Creneau creneau) {
 		this.id = id;
 		this.recettes = recettes;
 		this.dateDebut = dateDebut;
+		this.creneau= creneau;
 	}
 
 
 	
+
+
+	public Creneau getCreneau() {
+		return creneau;
+	}
+
+
+	public void setCreneau(Creneau creneau) {
+		this.creneau = creneau;
+	}
 
 
 	public Integer getId() {
@@ -80,7 +100,10 @@ public class Repas {
 
 	@Override
 	public String toString() {
-		return "Repas [id=" + id + ", recettes=" + recettes + ", dateDebut=" + dateDebut + "]";
+		return "Repas [id=" + id + ", dateDebut=" + dateDebut + ", recettes=" + recettes + ", creneau=" + creneau + "]";
 	}
+
+
+	
 	
 }

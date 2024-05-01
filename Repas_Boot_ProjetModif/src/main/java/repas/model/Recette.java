@@ -5,6 +5,8 @@ import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -20,6 +22,7 @@ import repas.view.Views;
 @Entity
 @Table(name="recipe")
 public class Recette {
+	 
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -35,13 +38,28 @@ public class Recette {
 	@JsonView(Views.RecetteWithInstruction.class)
 	private List<Instruction> instructions = new ArrayList();
 	
+	@Enumerated(EnumType.STRING)
+	@Column(columnDefinition = "ENUM('Entree','Plat','Dessert','Boisson'",nullable=false)
+	@JsonView(Views.Common.class)
+	private TypeRecette typeRecette;
 	
 	public Recette() {
 	}
 
-	public Recette(String nom) {
+	public Recette(String nom, TypeRecette typeRecette) {
 		this.nom = nom;
+		this.typeRecette=typeRecette;
+		
+		
 	
+	}
+
+	public TypeRecette getTypeRecette() {
+		return typeRecette;
+	}
+
+	public void setTypeRecette(TypeRecette typeRecette) {
+		this.typeRecette = typeRecette;
 	}
 
 	public Integer getId() {
@@ -70,8 +88,9 @@ public class Recette {
 
 	@Override
 	public String toString() {
-		return "Recette [id=" + id + ", nom=" + nom + ", instructions=" + instructions + "]";
+		return "Recette [id=" + id + ", nom=" + nom + ", instructions=" + instructions + ", typeRecette=" + typeRecette
+				+ "]";
 	}
-	
+
 }
 
