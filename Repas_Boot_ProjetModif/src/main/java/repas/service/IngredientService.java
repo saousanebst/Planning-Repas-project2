@@ -69,6 +69,7 @@ public class IngredientService {
 	{
 		return daoIngredient.findAllByInstruction(id);
 	}*/
+	
 	public Ingredient getByIdWithInstruction(Integer id)
 	{
 		return daoIngredient.findAllByInstruction(id);

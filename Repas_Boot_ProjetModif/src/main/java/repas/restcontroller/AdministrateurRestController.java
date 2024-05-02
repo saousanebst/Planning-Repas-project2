@@ -21,7 +21,9 @@ import org.springframework.web.server.ResponseStatusException;
 
 import com.fasterxml.jackson.annotation.JsonView;
 
+import repas.dto.ConnexionDTO;
 import repas.model.Administrateur;
+import repas.model.Utilisateur;
 import repas.service.AdministrateurService;
 import repas.view.Views;
 @RestController
@@ -75,5 +77,16 @@ public class AdministrateurRestController {
 		public void supprimerAdministrateur(@PathVariable Integer id) 
 		{
 			administrateurSrv.deleteById(id);
-		}		
+		}	
+		
+		@PostMapping("/login")
+	    public Administrateur connexion(@RequestBody ConnexionDTO connexionDTO) {
+			Administrateur administrateur = (Administrateur) this.administrateurSrv.login(connexionDTO.getLogin(), connexionDTO.getPassword());
+	        
+	        if (administrateur == null) {
+	            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "administrateur non trouvé");
+	        }
+	        
+	        return administrateur;
+	    }
 	}

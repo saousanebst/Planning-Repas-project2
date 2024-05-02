@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
-import { Utilisateur } from './utilisateur/model';
+import { Administrateur, Utilisateur } from './model';
 import { environment } from './environments/environment';
 import { Observable } from 'rxjs';
 
@@ -9,22 +9,29 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class AuthService {
+
   private utilisateur?: Utilisateur = undefined;
+  private administrateur?: Administrateur = undefined;
 
   constructor(private http: HttpClient, private router: Router) { }
 
   
   login(login: string, password: string) {
+   
+    
     this.http.post<Utilisateur>(environment.apiUrl + "/utilisateur/login", { "login": login, "password": password }).subscribe(resp => {
       this.utilisateur = resp;
-
-      this.router.navigate(["/home"]);
+      
+      if (this.utilisateur.type_compte === "user") {
+        this.router.navigate(["/home"]);
+      } else {
+        this.router.navigate(["/home"]);
+      }
     });
+    
   }
 
-  /*login(login:string , password: string): Observable<any> {
-    return this.http.post<any>(environment.apiUrl + '/utilisateur/login', { login, password });
-  }*/
+
 
   logout() {
     this.utilisateur = undefined;

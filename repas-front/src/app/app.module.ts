@@ -16,6 +16,7 @@ import { EntreeComponent } from './entree/entree.component';
 import { AboutComponent } from './about/about.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PlatComponent } from './plat/plat.component';
+import { AdministrateurComponent } from './administrateur/administrateur.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { PlatComponent } from './plat/plat.component';
     BoissonComponent,
     EntreeComponent,
     AboutComponent,
-    PlatComponent
+    PlatComponent,
+    AdministrateurComponent
     
   ],
   imports: [

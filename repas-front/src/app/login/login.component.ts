@@ -26,8 +26,11 @@ export class LoginComponent {
   }
 
   connexion() {
+
     this.authService.login(this.emailCtrl.value, this.passwordCtrl.value);
   }
+
+  
 
   /*connexion() {
   this.authService.login(this.emailCtrl.value, this.passwordCtrl.value).subscribe(

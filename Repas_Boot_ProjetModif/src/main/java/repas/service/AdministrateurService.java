@@ -57,11 +57,9 @@ public class AdministrateurService {
 		}
 		return daoCompte.save(administrateur);
 	}
+
 	
 	//update partiel
-	
-	
-	
 	public Administrateur updatePartiel(Administrateur administrateurJSON) 
 	{
 		if(administrateurJSON.getId()==null) 
@@ -114,5 +112,9 @@ public class AdministrateurService {
 		daoCompte.deleteById(id);
 	}
 	
+	// Méthode de connexion
+    public Compte login(String email, String password) {
+        return daoCompte.findByEmailAndPassword(email, password);
+    }
 	
 }
