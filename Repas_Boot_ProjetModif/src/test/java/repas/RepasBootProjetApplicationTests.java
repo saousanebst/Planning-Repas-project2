@@ -14,6 +14,7 @@ import repas.model.Administrateur;
 import repas.model.Compte;
 import repas.model.Ingredient;
 import repas.model.Recette;
+import repas.model.TypeRecette;
 import repas.model.Utilisateur;
 
 @SpringBootTest
@@ -48,17 +49,17 @@ class RepasBootProjetApplicationTests {
         ingredient2 = ingredientSrv.save(ingredient2);
         ingredient3 = ingredientSrv.save(ingredient3);
 
-        // Création de la recette avec le nom "Pizza" et la liste d'ingrédients
-        //Recette entree1 = new Recette("Pizza");
-        //Recette plat1 = new Recette("Pates");
-        //Recette boisson1 = new Recette("Citronnade");
-        //Recette dessert1 = new Recette("Tarte au fraise");
+         //Création de la recette avec le nom "Pizza" et la liste d'ingrédients
+        Recette entree1 = new Recette("Pizza",TypeRecette.Entree);
+        Recette plat1 = new Recette("Pates",TypeRecette.Plat);
+        Recette boisson1 = new Recette("Citronnade",TypeRecette.Boisson);
+        Recette dessert1 = new Recette("Tarte au fraise",TypeRecette.Dessert);
 		
 		//Ajout recettes
-        //entree1 = recetteSrv.save(entree1);
-        //plat1 = recetteSrv.save(plat1);
-        //boisson1 = recetteSrv.save(boisson1);
-        //dessert1 = recetteSrv.save(dessert1);
+        entree1 = recetteSrv.save(entree1);
+        plat1 = recetteSrv.save(plat1);
+        boisson1 = recetteSrv.save(boisson1);
+        dessert1 = recetteSrv.save(dessert1);
 		
 		//Creation de compte
         Utilisateur user1 = new Utilisateur("Bardou", "Hedieh", "test.mail.com", "123456");
