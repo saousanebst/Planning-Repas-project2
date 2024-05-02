@@ -10,7 +10,7 @@ import { Recette } from '../model';
 })
 export class RecetteService {
   
-  private apiUrl = environment.apiUrl+'/recettes'; 
+  private apiUrl = environment.apiUrl+'/recette'; 
 
   constructor(private http: HttpClient) { }
 
