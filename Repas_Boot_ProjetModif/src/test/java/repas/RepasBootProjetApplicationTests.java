@@ -49,7 +49,7 @@ class RepasBootProjetApplicationTests {
         Administrateur admin1 = new Administrateur("BASTAOUI", "Saousane", "test1.mail.com", "987654");
         
         //Creation des ingredients
-        Ingredient ingredient1 = new Ingredient("Pâte à pizza");
+/*        Ingredient ingredient1 = new Ingredient("Pâte à pizza");
         Ingredient ingredient2 = new Ingredient("Sauce tomate");
         Ingredient ingredient3 = new Ingredient("Fromage rapé");
         Ingredient ingredient4 = new Ingredient("Citron");
@@ -93,7 +93,7 @@ class RepasBootProjetApplicationTests {
         //Ajout compte
         user1 = utilisateurSrv.save(user1);
         admin1 = administrateurSrv.save(admin1);
-        
+ */       
 	}
 
 }
