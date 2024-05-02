@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
-import { Administrateur, Utilisateur } from './model';
+import { Administrateur, Compte, Utilisateur } from './model';
 import { environment } from './environments/environment';
 import { Observable } from 'rxjs';
 
@@ -10,8 +10,8 @@ import { Observable } from 'rxjs';
 })
 export class AuthService {
 
-  private utilisateur?: Utilisateur = undefined;
-  private administrateur?: Administrateur = undefined;
+  private compte?: Compte = undefined;
+  
 
   constructor(private http: HttpClient, private router: Router) { }
 
@@ -19,13 +19,15 @@ export class AuthService {
   login(login: string, password: string) {
    
     
-    this.http.post<Utilisateur>(environment.apiUrl + "/utilisateur/login", { "login": login, "password": password }).subscribe(resp => {
-      this.utilisateur = resp;
+    this.http.post<Compte>(environment.apiUrl + "/compte/login", { "login": login, "password": password }).subscribe(resp => {
+      this.compte = resp;
       
-      if (this.utilisateur.type_compte === "user") {
+      if (this.compte.type_compte === "user") {
         this.router.navigate(["/home"]);
-      } else {
-        this.router.navigate(["/home"]);
+      } else if (this.compte.type_compte === "admin"){
+        this.router.navigate(["/home"]);//version 2 pages a creer
+      } else{
+        console.log("erreur");
       }
     });
     
@@ -34,24 +36,24 @@ export class AuthService {
 
 
   logout() {
-    this.utilisateur = undefined;
+    this.compte = undefined;
   }
 
   signUp(nom: string, prenom: string, email: string, password: string, passwordConf:string){
     this.http.post<Utilisateur>(environment.apiUrl + "/utilisateur/signup", { "nom": nom,"prenom": prenom,"login": email, "password": password, "passwordConf":passwordConf}).subscribe(resp => {
-      this.utilisateur = resp;
+      this.compte = resp;
 
       this.router.navigate(["/login"]);
     });
   }
 
   isLogged(): boolean {
-    return this.utilisateur != undefined;
+    return this.compte != undefined;
   }
 
   getUtilisateur() : Utilisateur | undefined{
-    if(this.utilisateur) {
-      return this.utilisateur;
+    if(this.compte) {
+      return this.compte;
     }
 
     return undefined;

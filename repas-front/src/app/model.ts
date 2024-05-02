@@ -1,35 +1,34 @@
-export class Utilisateur {
+export class Compte {
     public id?: number;
     public nom?: string;
     public prenom?: string;
-    public login?: string;
+    public email?: string;
     public password?: string;
-    public disabled?: boolean;
+    public type_compte?:string;
 
-    constructor(id?: number, nom?: string, prenom?: string,  login?: string, password?: string, disabled?: boolean) {
+    constructor(id?: number, nom?: string, prenom?: string,  email?: string, password?: string, type_compte?:string) {
         this.id = id;
         this.nom = nom;
         this.prenom = prenom ;
-        this.login = login;
+        this.email = email;
         this.password = password;
-        this.disabled = disabled;
+        this.type_compte = type_compte;
     }
 }
 
-export class Administrateur {
-    public id?: number;
-    public nom?: string;
-    public prenom?: string;
-    public login?: string;
-    public password?: string;
-    public disabled?: boolean;
+export class Utilisateur extends Compte{
+    
 
-    constructor(id?: number, nom?: string, prenom?: string,  login?: string, password?: string, disabled?: boolean) {
-        this.id = id;
-        this.nom = nom;
-        this.prenom = prenom ;
-        this.login = login;
-        this.password = password;
-        this.disabled = disabled;
+    constructor(id?: number, nom?: string, prenom?: string,  email?: string, password?: string, type_compte?:string) {
+        super(id, nom, prenom, email, password, type_compte);
     }
+}
+
+
+export class Administrateur extends Compte{
+   
+    constructor(id?: number, nom?: string, prenom?: string,  email?: string, password?: string, type_compte?:string) {
+        super(id, nom, prenom, email, password, type_compte);
+    }
+    
 }
