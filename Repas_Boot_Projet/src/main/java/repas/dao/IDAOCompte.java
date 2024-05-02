@@ -14,10 +14,10 @@ public interface IDAOCompte extends JpaRepository<Compte,Integer>{
 
 	public Compte findByEmailAndPassword(String email, String password); 
 
-	@Query("from user")
+	@Query("from Utilisateur")
 	public List<Utilisateur> findAllUtilisateur();
 
-	@Query("from admin")
+	@Query("from Administrateur")
 	public List<Administrateur> findAllAdministrateur();
 
 }

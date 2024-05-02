@@ -2,6 +2,7 @@ package repas.restcontroller;
 
 import java.util.List;
 
+
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,6 +25,7 @@ import com.fasterxml.jackson.annotation.JsonView;
 import repas.model.Utilisateur;
 import repas.service.UtilisateurService;
 import repas.view.Views;
+
 @RestController
 @RequestMapping("/api/utilisateur")
 @CrossOrigin("*")
@@ -76,5 +78,6 @@ public class UtilisateurRestController {
 	{
 		utilisateurSrv.deleteById(id);
 	}
+
 	
 }

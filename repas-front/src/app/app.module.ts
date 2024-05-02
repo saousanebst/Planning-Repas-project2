@@ -9,7 +9,15 @@ import { HomeComponent } from './home/home.component';
 import { UtilisateurComponent } from './utilisateur/utilisateur.component';
 import { LoginComponent } from './login/login.component';
 import { ContactComponent } from './contact/contact.component';
-import { IngredientComponent } from './ingredient/ingredient.component';
+import { InscriptionComponent } from './inscription/inscription.component';
+import { DessertComponent } from './dessert/dessert.component';
+import { BoissonComponent } from './boisson/boisson.component';
+import { EntreeComponent } from './entree/entree.component';
+import { AboutComponent } from './about/about.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { PlatComponent } from './plat/plat.component';
+import { AdministrateurComponent } from './administrateur/administrateur.component';
+import { RecetteComponent } from './recette/recette.component';
 
 @NgModule({
   declarations: [
@@ -18,13 +26,22 @@ import { IngredientComponent } from './ingredient/ingredient.component';
     UtilisateurComponent,
     LoginComponent,
     ContactComponent,
-    IngredientComponent
+    InscriptionComponent,
+    DessertComponent,
+    BoissonComponent,
+    EntreeComponent,
+    AboutComponent,
+    PlatComponent,
+    AdministrateurComponent,
+    RecetteComponent
     
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
