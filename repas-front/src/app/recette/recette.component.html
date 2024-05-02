@@ -6,77 +6,23 @@
               <div class="overlap-2">
                 <div class="content-2">
                   <div class="cards">
-
                     
-                    <!-- <div *ngFor="let recette of recettes" class="element-2">
-                        <img class="mask-group-5" [src]="recette.photo" />
-                        <div class="text">
-                          <div class="text-wrapper-4">{{ recette.nom }}</div>
-                          <!-- <p class="text-wrapper-5">Type: {{ TypeRecette[recette.type] }}</p> -->
-                          <p class="text-wrapper-5">Explication test recette.</p> -->
+                    <div class="container">
+                        <div class="row">
+                          <!-- Boucle *ngFor pour afficher les recettes -->
+                          <div class="col-md-3 mb-4" *ngFor="let recette of recettes">
+                            <div class="card" cdkDrag>
+                                <img class="card-img-top" [src]="'assets/images/entree_images/img/' + recette.photo" alt="Image de la recette">
+                              <div class="card-body">
+                                <h5 class="card-title">{{ recette.nom }}</h5>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- Fin de la boucle *ngFor -->
+                        </div>
+                      </div>
+                      
 
-                          <!--Jusqu'ICI-->
-
-
-
-
-
-                    <!-- <div class="element-2">
-                      <img class="mask-group-5" src="assets/images/entree_images/img/mask-group-8.png" />
-                      <div class="text">
-                        <div class="text-wrapper-4">Fried Eggs</div>
-                        <p class="text-wrapper-5">Made with eggs, lettuce, salt, oil and other ingredients.</p>-->
-                      </div> 
-                    </div>
-                    <!-- <div class="element-3">
-                      <img class="mask-group-5" src="assets/images/entree_images/img/mask-group-9.png" />
-                      <div class="text">
-                        <div class="text-wrapper-4">Hawaiian Pizza</div>
-                        <p class="text-wrapper-5">Made with eggs, lettuce, salt, oil and other ingredients.</p>
-                      </div>
-                    </div>
-                    <div class="element-4">
-                      <img class="mask-group-5" src="assets/images/entree_images/img/mask-group-10.png" />
-                      <div class="text">
-                        <div class="text-wrapper-4">Martinez Cocktail</div>
-                        <p class="text-wrapper-5">Made with eggs, lettuce, salt, oil and other ingredients.</p>
-                      </div>
-                    </div>
-                    <div class="element-5">
-                      <img class="mask-group-5" src="assets/images/entree_images/img/mask-group-11.png" />
-                      <div class="text">
-                        <div class="text-wrapper-4">Butterscotch Cake</div>
-                        <p class="text-wrapper-5">Made with eggs, lettuce, salt, oil and other ingredients.</p>
-                      </div>
-                    </div>
-                    <div class="element-6">
-                      <img class="mask-group-5" src="assets/images/entree_images/img/mask-group-12.png" />
-                      <div class="text">
-                        <div class="text-wrapper-4">Mint Lemonade</div>
-                        <p class="text-wrapper-5">Made with eggs, lettuce, salt, oil and other ingredients.</p>
-                      </div>
-                    </div>
-                    <div class="element-7">
-                      <img class="mask-group-5" src="assets/images/entree_images/img/mask-group-13.png" />
-                      <div class="text">
-                        <div class="text-wrapper-4">Chocolate Icecream</div>
-                        <p class="text-wrapper-5">Made with eggs, lettuce, salt, oil and other ingredients.</p>
-                      </div>
-                    </div>
-                    <div class="element-8">
-                      <img class="mask-group-5" src="assets/images/entree_images/img/mask-group-14.png" />
-                      <div class="text">
-                        <div class="text-wrapper-4">Cheese Burger</div>
-                        <p class="text-wrapper-5">Made with eggs, lettuce, salt, oil and other ingredients.</p>
-                      </div>
-                    </div>
-                    <div class="element-9">
-                      <img class="mask-group-5" src="assets/images/entree_images/img/mask-group-15.png" />
-                      <div class="text">
-                        <div class="text-wrapper-4">Classic Waffles</div>
-                        <p class="text-wrapper-5">Made with eggs, lettuce, salt, oil and other ingredients.</p>
-                      </div>
-                    </div> -->
                   </div>
                   <div class="title">
                     <div class="title-2">
@@ -100,68 +46,29 @@
   <div class="content-3">
   <div class="text-wrapper-19">
     <table>
-      <!-- <caption>
-        Mon calendrier
-      </caption>  -->       
       <thead>
         <tr>
           <th></th>
-          <th>Lundi <br>22/04/2024</th>
-          <th>Mardi <br>23/04/2024</th>
-          <th>Mercredi <br>24/04/2024</th>
-          <th>Jeudi <br>25/04/2024</th>
-          <th>Vendredi <br>26/04/2024</th>
-          <th>Samedi <br>27/04/2024</th>
-          <th>Dimanche <br>28/04/2024</th>
+          <th *ngFor="let day of days">
+            <div class="date">{{ day.date | date:'dd/MM/yyyy' }}</div>
+            <div class="day">{{ day.name }}</div>
+          </th>
         </tr>
       </thead>
       <tbody>
-      <tr>
-        <td>PETIT-DÉJEUNER</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>DÉJEUNER</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>GOÛTER</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>DÎNER</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-    </tbody>
+        <tr *ngFor="let meal of meals">
+          <td>{{ meal }}</td>
+          <td *ngFor="let day of days"></td>
+        </tr>
+      </tbody>
     </table>
+    
+    
   </div>
   </div>
           </div>
 
     </div>
 </div>
+
 </div>

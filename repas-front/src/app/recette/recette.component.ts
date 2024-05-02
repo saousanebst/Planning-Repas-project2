@@ -1,14 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { RecetteService } from './recette.service';
-/*import { Recette } from '../model';*/
 import { Recette, TypeRecette } from '../model';
 
-/*enum TypeRecette {
-  ENTREE = 'ENTREE',
-  PLAT = 'PLAT',
-  DESSERT = 'DESSERT',
-  BOISSON = 'BOISSON'
-  }*/
+
 
 @Component({
   selector: 'recette, [recette]',
@@ -19,14 +13,19 @@ export class RecetteComponent implements OnInit{
   
   recettes?: Recette[];
   TypeRecette = TypeRecette;
-  /*type?:TypeRecette;*/
+  
+  days: { name: string, date: Date }[] = [];
+  meals: string[] = ['PETIT-DÉJEUNER', 'DÉJEUNER', 'GOÛTER', 'DÎNER'];
+  
+  
   
   constructor(private recetteService: RecetteService) { 
-    
-  }
+    }
+
 
   ngOnInit() {
     this.getRecettes();
+    this.initDays();
   }
 
   getRecettes(): void {
@@ -42,28 +41,22 @@ export class RecetteComponent implements OnInit{
         );
 }
 
-  /*getRecettes(): void {
-    this.recetteService.getRecettes()
-      .subscribe(recettes => this.recettes = recettes);
-      console.log(this.recettes); 
-  }*/
 
-  /*ngOnInit(): void {
-    this.loadRecettes();
+initDays(): void {
+  const today = new Date();
+  this.days.push({ name: this.getDayName(today.getDay()), date: today }); // Ajoute le jour actuel
+  
+  // Initialise les 6 jours suivants
+  for (let i = 1; i < 7; i++) {
+    const nextDay = new Date(today);
+    nextDay.setDate(today.getDate() + i);
+    this.days.push({ name: this.getDayName(nextDay.getDay()), date: nextDay });
   }
+}
 
-  // Méthode pour charger les recettes depuis le service
-  loadRecettes() {
-    this.recetteService.getRecettes().subscribe(
-      (recettes: Recette[]) => {
-        this.recettes = recettes;
-      },
-      (error) => {
-        console.error('Erreur lors du chargement des recettes :', error);
-      }
-    );
-
-
-  }*/
+getDayName(dayIndex: number): string {
+  const days = ['Dimanche', 'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi'];
+  return days[dayIndex];
+}
 
 }

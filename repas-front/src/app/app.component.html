@@ -1,13 +1,5 @@
 <div class="homepage">
   <div class="div">
-    <!--<home></home>-->
-    <!--<contact></contact>-->
-    <!--<login></login>-->
-    <!--<inscription></inscription>-->
-    <!--<dessert></dessert>-->
-    <!--<boisson></boisson>-->
-    <!--<entree></entree>-->
-    <!--<about></about>-->
 
     <router-outlet></router-outlet>
 
@@ -44,7 +36,7 @@
                 </div>
                 <div class="menu-4">
                   <div class="text-wrapper-10">
-                    <button *ngIf="isLogged()" [routerLink]="['/entree']" routerLinkActive="active">Recettes</button>
+                    <button *ngIf="isLogged()" [routerLink]="['/recette']" routerLinkActive="active">Recettes</button>
                     </div>
                 </div>
                 <div class="menu-5">

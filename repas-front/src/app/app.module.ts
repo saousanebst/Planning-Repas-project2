@@ -18,6 +18,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PlatComponent } from './plat/plat.component';
 import { AdministrateurComponent } from './administrateur/administrateur.component';
 import { RecetteComponent } from './recette/recette.component';
+import {DragDropModule} from '@angular/cdk/drag-drop';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { RecetteComponent } from './recette/recette.component';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    DragDropModule
   ],
   providers: [],
   bootstrap: [AppComponent]
