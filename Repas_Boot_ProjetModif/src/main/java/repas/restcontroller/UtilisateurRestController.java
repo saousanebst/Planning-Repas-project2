@@ -1,7 +1,7 @@
 package repas.restcontroller;
 
 import java.util.List;
-
+import java.util.Optional;
 
 import javax.validation.Valid;
 
@@ -22,6 +22,8 @@ import org.springframework.web.server.ResponseStatusException;
 
 import com.fasterxml.jackson.annotation.JsonView;
 
+import repas.dto.ConnexionDTO;
+import repas.model.Compte;
 import repas.model.Utilisateur;
 import repas.service.UtilisateurService;
 import repas.view.Views;
@@ -80,4 +82,14 @@ public class UtilisateurRestController {
 	}
 
 	
+	@PostMapping("/login")
+    public Utilisateur connexion(@RequestBody ConnexionDTO connexionDTO) {
+        Utilisateur utilisateur = (Utilisateur) this.utilisateurSrv.login(connexionDTO.getLogin(), connexionDTO.getPassword());
+        
+        if (utilisateur == null) {
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Utilisateur non trouvé");
+        }
+        
+        return utilisateur;
+    }
 }

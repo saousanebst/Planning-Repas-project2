@@ -67,6 +67,11 @@
                     <button *ngIf="!isLogged()" [routerLink]="['/login']" routerLinkActive="active">Se Connecter</button>
                     </div>
                 </div>
+                <div class="menu-8">
+                  <div class="text-wrapper-10">
+                    <button *ngIf="isLogged()" (click)="logout()">Déconnexion</button>
+                    </div>
+                </div>
               </div>
             </div>
           </div>

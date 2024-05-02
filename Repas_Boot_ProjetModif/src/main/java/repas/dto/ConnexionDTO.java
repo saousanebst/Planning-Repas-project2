@@ -29,6 +29,7 @@
 package repas.dto;
 
 public class ConnexionDTO {
+	
     private String login;
     private String password;
     private String role; // Champ pour spécifier le rôle de l'utilisateur lors de la connexion ("utilisateur" ou "admin")

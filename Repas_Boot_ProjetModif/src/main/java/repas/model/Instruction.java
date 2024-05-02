@@ -42,7 +42,7 @@ public class Instruction {
 	
 
 	@Enumerated(EnumType.STRING)
-	@Column(columnDefinition = "ENUM('gramme', 'millilitre', 'quantite'",nullable=false)
+	@Column(columnDefinition = "ENUM('gramme', 'millilitre', 'quantite')",nullable=false)
 	@JsonView(Views.Common.class)
 	private Unite unite;
 	

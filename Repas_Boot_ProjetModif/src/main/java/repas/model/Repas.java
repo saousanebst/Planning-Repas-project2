@@ -36,9 +36,8 @@ public class Repas {
 	private List <Recette> recettes = new ArrayList<>();
 	
 	
-
 	@Enumerated(EnumType.STRING)
-	@Column(columnDefinition = "ENUM('Petit_déjeuner', 'Déjeuner', 'Goûter', 'Dîner'",nullable=false)
+	@Column(columnDefinition = "ENUM('Petit_déjeuner', 'Déjeuner', 'Goûter', 'Dîner')",nullable=false)
 	@JsonView(Views.Common.class)
 	private Creneau creneau;
 	

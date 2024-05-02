@@ -39,7 +39,7 @@ public class Recette {
 	private List<Instruction> instructions = new ArrayList();
 	
 	@Enumerated(EnumType.STRING)
-	@Column(columnDefinition = "ENUM('Entree','Plat','Dessert','Boisson'",nullable=false)
+	@Column(columnDefinition = "ENUM('Entree','Plat','Dessert','Boisson')",nullable=false)
 	@JsonView(Views.Common.class)
 	private TypeRecette typeRecette;
 	
