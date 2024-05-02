@@ -7,11 +7,32 @@
                 <div class="content-2">
                   <div class="cards">
 
+                    <!--CE QUE JE VIENS DE RAJOUTER LES FILLES -->
+                    <div class="text-wrapper-4">{{ recette.nom }}</div>
+                    <div class="entree">
+                      <h2>Entrées</h2>
+                      <div cdkDropList (cdkDropListDropped)="onDrop($event)">
+                        <div *ngFor="let recette of entreeRecettes" class="recette" cdkDrag>{{ recette.nom }}</div>
+                      </div>
+                    </div>
+                    
+                    <div class="details">
+                      <div class = "element-2" For="let recette of entreeRecettes">
+                        <img class=" mask-group-5" [src]="recette.photo" alt="{{ recette.nom }}">
+                      </div>
+                    </div>
+
                     <div *ngFor="let recette of recettes" class="element-2">
                         <img class="mask-group-5" [src]="recette.photo" />
                         <div class="text">
                           <div class="text-wrapper-4">{{ recette.nom }}</div>
                           <p class="text-wrapper-5">Type: {{ TypeRecette[recette.type] }}</p>
+
+                          <!--Jusqu'ICI-->
+
+
+
+
 
                     <!-- <div class="element-2">
                       <img class="mask-group-5" src="assets/images/entree_images/img/mask-group-8.png" />
