@@ -48,10 +48,14 @@ public class Recette {
 
 	public Recette(String nom, TypeRecette typeRecette) {
 		this.nom = nom;
-		this.typeRecette=typeRecette;
-		
-		
+		this.typeRecette=typeRecette;	
+	}
 	
+
+	public Recette(String nom, List<Instruction> instructions, TypeRecette typeRecette) {
+		this.nom = nom;
+		this.instructions = instructions;
+		this.typeRecette = typeRecette;
 	}
 
 	public TypeRecette getTypeRecette() {

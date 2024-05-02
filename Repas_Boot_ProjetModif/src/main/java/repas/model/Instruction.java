@@ -51,14 +51,21 @@ public class Instruction {
 	public Instruction() {
 	}
 
-	public Instruction(Integer id, int quantiteIngredient, Unite unite) {
+	public Instruction(Integer id, Unite unite) {
 		this.id = id;
-		this.quantiteIngredient = quantiteIngredient;
+		/*this.quantiteIngredient = quantiteIngredient;*/
 		this.unite=unite;
 	}
 
 	
 	
+	public Instruction(Recette recette, Ingredient ingredient, int quantiteIngredient, Unite unite) {
+		this.quantiteIngredient = quantiteIngredient;
+		this.recette = recette;
+		this.ingredient = ingredient;
+		this.unite = unite;
+	}
+
 	public Integer getId() {
 		return id;
 	}
@@ -75,7 +82,6 @@ public class Instruction {
 		this.quantiteIngredient = quantiteIngredient;
 	}
 
-	
 	
 	public Recette getRecette() {
 		return recette;
@@ -106,7 +112,6 @@ public class Instruction {
 		return "Instruction [id=" + id + ", quantiteIngredient=" + quantiteIngredient + ", recette=" + recette
 				+ ", ingredient=" + ingredient + ", unite=" + unite + "]";
 	}
-
 
 	
 }
