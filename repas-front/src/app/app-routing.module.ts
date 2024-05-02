@@ -10,6 +10,7 @@ import { ContactComponent } from './contact/contact.component';
 import { PlatComponent } from './plat/plat.component';
 import { BoissonComponent } from './boisson/boisson.component';
 import { DessertComponent } from './dessert/dessert.component';
+import { RecetteComponent } from './recette/recette.component';
 
 const routes: Routes = [
   {path: "home", component: HomeComponent},
@@ -19,6 +20,7 @@ const routes: Routes = [
   {path: "plat", component: PlatComponent},
   {path: "boisson", component: BoissonComponent},
   {path: "dessert", component: DessertComponent},
+  {path: "recette", component: RecetteComponent},
   {path: "about", component: AboutComponent},
   {path: "contact", component: ContactComponent},
   {path: "login", component: LoginComponent},

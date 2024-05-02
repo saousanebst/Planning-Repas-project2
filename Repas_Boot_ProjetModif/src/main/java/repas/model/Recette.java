@@ -33,6 +33,10 @@ public class Recette {
 	@JsonView(Views.Common.class)
 	private String nom;
 	
+	@Column(name="photo_recipe", nullable=false, length=255)
+	@JsonView(Views.Common.class)
+	private String photo;
+	
 	
 	@OneToMany(mappedBy="recette")
 	@JsonView(Views.RecetteWithInstruction.class)
@@ -54,6 +58,15 @@ public class Recette {
 
 	public Recette(String nom, List<Instruction> instructions, TypeRecette typeRecette) {
 		this.nom = nom;
+		this.instructions = instructions;
+		this.typeRecette = typeRecette;
+	}
+	
+	
+
+	public Recette(String nom, String photo, List<Instruction> instructions, TypeRecette typeRecette) {
+		this.nom = nom;
+		this.photo = photo;
 		this.instructions = instructions;
 		this.typeRecette = typeRecette;
 	}
@@ -82,6 +95,15 @@ public class Recette {
 		this.nom = nom;
 	}
 
+	
+	public String getPhoto() {
+		return photo;
+	}
+
+	public void setPhoto(String photo) {
+		this.photo = photo;
+	}
+
 	public List<Instruction> getInstructions() {
 		return instructions;
 	}
@@ -92,8 +114,8 @@ public class Recette {
 
 	@Override
 	public String toString() {
-		return "Recette [id=" + id + ", nom=" + nom + ", instructions=" + instructions + ", typeRecette=" + typeRecette
-				+ "]";
+		return "Recette [id=" + id + ", nom=" + nom + ", photo=" + photo + ", instructions=" + instructions
+				+ ", typeRecette=" + typeRecette + "]";
 	}
 
 }

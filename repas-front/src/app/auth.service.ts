@@ -17,8 +17,7 @@ export class AuthService {
 
   
   login(login: string, password: string) {
-   
-    
+      
     this.http.post<Compte>(environment.apiUrl + "/compte/login", { "login": login, "password": password }).subscribe(resp => {
       this.compte = resp;
       

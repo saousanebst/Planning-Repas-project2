@@ -32,3 +32,17 @@ export class Administrateur extends Compte{
     }
     
 }
+
+export class Recette {
+    public id?: number;
+    public nom?: string;
+    public photo?: string;
+    recettes:Array<Recette> = new Array<Recette>();
+type: any;
+
+    constructor(id?: number, nom?:string, photo?: string){
+        this.id = id;
+        this.nom = nom;
+        this.photo = photo;
+    }
+}

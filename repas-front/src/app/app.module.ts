@@ -17,6 +17,7 @@ import { AboutComponent } from './about/about.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PlatComponent } from './plat/plat.component';
 import { AdministrateurComponent } from './administrateur/administrateur.component';
+import { RecetteComponent } from './recette/recette.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { AdministrateurComponent } from './administrateur/administrateur.compone
     EntreeComponent,
     AboutComponent,
     PlatComponent,
-    AdministrateurComponent
+    AdministrateurComponent,
+    RecetteComponent
     
   ],
   imports: [

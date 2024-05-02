@@ -30,21 +30,24 @@ import repas.view.Views;
 @CrossOrigin("*")
 
 public class RecetteRestController {
-	@Autowired 
+	
+		@Autowired 
 		RecetteService recetteSrv;
+		
 		@GetMapping
 		@JsonView(Views.Recette.class)
 		public List<Recette> allRecettes() 
 		{
 			return recetteSrv.getAll();
 		}
-		@GetMapping("/{id}")
-		@JsonView(Views.Recette.class)
 		
+		@GetMapping("/{id}")
+		@JsonView(Views.Recette.class)		
 		public Recette ficheRecette(@PathVariable Integer id) 
 		{
 			return recetteSrv.getById(id);
 		}
+		
 		@PostMapping
 		public Recette ajoutRecette(@Valid @RequestBody Recette Recette, BindingResult result) 
 		{
