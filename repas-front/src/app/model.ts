@@ -37,12 +37,28 @@ export class Recette {
     public id?: number;
     public nom?: string;
     public photo?: string;
-    recettes:Array<Recette> = new Array<Recette>();
-type: any;
+    //recettes:Array<Recette> = new Array<Recette>();
+    //type: any;
+    typeRecette: TypeRecette;
 
-    constructor(id?: number, nom?:string, photo?: string){
+    /*constructor(id?: number, nom?:string, photo?: string){
+        this.id = id;
+        this.nom = nom; 
+        this.photo = photo;
+    }*/
+
+    constructor(id: number, nom: string, photo: string, typeRecette: TypeRecette) {
         this.id = id;
         this.nom = nom;
         this.photo = photo;
+        this.typeRecette = typeRecette;
     }
+    
+}
+
+export enum TypeRecette {
+    ENTREE = 'ENTREE',
+    PLAT = 'PLAT',
+    DESSERT = 'DESSERT',
+    BOISSON = 'BOISSON'
 }
