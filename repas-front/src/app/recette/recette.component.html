@@ -7,14 +7,14 @@
                 <div class="content-2">
                   <div class="cards">
                     
-                    <div class="container">
+                    <div class="container" cdkDropList id="recettes" [cdkDropListConnectedTo]="['done']" [cdkDropListData]="recettes" (cdkDropListDropped)="drop($event)">
                         <div class="row">
                           <!-- Boucle *ngFor pour afficher les recettes -->
                           <div class="col-md-3 mb-4" *ngFor="let recette of recettes">
-                            <div class="card" cdkDrag>
+                            <div class="card">
                                 <img class="card-img-top" [src]="'assets/images/entree_images/img/' + recette.photo" alt="Image de la recette">
                               <div class="card-body">
-                                <h5 class="card-title">{{ recette.nom }}</h5>
+                                <h5 class="card-title" cdkDrag *ngFor="let item of recettes">{{ recette.nom }}</h5>
                               </div>
                             </div>
                           </div>
@@ -45,7 +45,7 @@
   <br><br><br><br><br><br><br><br><br><br>
   <div class="content-3">
   <div class="text-wrapper-19">
-    <table>
+    <table class="container" cdkDropList id="done" [cdkDropListConnectedTo]="['recettes']" [cdkDropListData]="done" (cdkDropListDropped)="drop($event)">
       <thead>
         <tr>
           <th></th>
@@ -57,7 +57,7 @@
       </thead>
       <tbody>
         <tr *ngFor="let meal of meals">
-          <td>{{ meal }}</td>
+          <td cdkDrag *ngFor="let item of done">{{ meal }}</td>
           <td *ngFor="let day of days"></td>
         </tr>
       </tbody>

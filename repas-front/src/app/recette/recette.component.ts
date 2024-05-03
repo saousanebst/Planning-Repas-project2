@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { RecetteService } from './recette.service';
 import { Recette, TypeRecette } from '../model';
+import { CdkDragDrop, moveItemInArray, transferArrayItem } from '@angular/cdk/drag-drop';
 
 
 
@@ -17,6 +18,7 @@ export class RecetteComponent implements OnInit{
   days: { name: string, date: Date }[] = [];
   meals: string[] = ['PETIT-DÉJEUNER', 'DÉJEUNER', 'GOÛTER', 'DÎNER'];
   
+  done?: Recette[];
   
   
   constructor(private recetteService: RecetteService) { 
@@ -57,6 +59,22 @@ initDays(): void {
 getDayName(dayIndex: number): string {
   const days = ['Dimanche', 'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi'];
   return days[dayIndex];
+}
+
+
+drop(event: CdkDragDrop<string[]>):void {
+  if (event.previousContainer === event.container) {
+    // Reorder items within the same list
+    moveItemInArray(event.container.data, event.previousIndex, event.currentIndex);
+  } else {
+    // Move items between lists
+    transferArrayItem(
+      event.previousContainer.data,
+      event.container.data,
+      event.previousIndex,
+      event.currentIndex
+    );
+  }
 }
 
 }
