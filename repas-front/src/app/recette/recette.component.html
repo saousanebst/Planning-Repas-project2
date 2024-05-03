@@ -1,4 +1,5 @@
 <div class="entres">
+  <div class="content">
   <div class="div">
 
       <div class="overlap">
@@ -58,8 +59,12 @@
     <tbody>
       <tr *ngFor="let meal of meals">
         <td>{{ meal }}</td>
-        <td *ngFor="let day of days"></td>
+        <!-- Ajoutez cdkDropList sur la balise td qui représente chaque jour -->
+        <td *ngFor="let day of days" cdkDropList [cdkDropListData]="day.recette" (cdkDropListDropped)="drop($event, day, 'PLANNING')">
+          <!-- Contenu de la cellule -->
+        </td>
       </tr>
+      
     </tbody>
   </table>
   
@@ -70,5 +75,5 @@
 
   </div>
 </div>
-
+</div>
 </div>

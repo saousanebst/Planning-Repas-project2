@@ -3,7 +3,8 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-    width: 100%;
+    width: 100%; 
+    
   }
   
   .liste-ingredients .div {
@@ -523,24 +524,54 @@
   }
   
   /* Style des cases à cocher */
-  input[type="checkbox"] {
+/*   input[type="checkbox"] {
     transform: scale(1.5); /* Pour agrandir les cases à cocher */
-  }
+  /*} */
   
   /* Style des cases cochées */
-  input[type="checkbox"]:checked + label::before {
+/*   input[type="checkbox"]:checked + label::before {
     content: "\2714"; /* Symbole de check */
-    color: #55b055; /* Couleur verte */
-    font-size: 20px;
-  }
+   /* color: #55b055; /* Couleur verte */
+    /*font-size: 20px;
+  } */
   
   /* Style des étiquettes associées aux cases à cocher */
-  label {
+/*   label {
     cursor: pointer;
   }
-  
+   */
   /* Hover sur les étiquettes */
-  label:hover {
+/*   label:hover {
     color: #007bff; /* Couleur bleue */
-  }
+  /*} */
   
+  /************ modif ingredient */
+/* Style pour les cartes d'ingredient */
+/* Style pour les cartes d'ingrédient */
+.liste-ingredients .card {
+  width: 100%; /* Définit la largeur de chaque carte */
+  height: auto; /* Permet à la hauteur de s'adapter au contenu */
+  margin-bottom: 30px; /* Ajoute de l'espace entre chaque carte */
+  border: 1px solid #ddd; /* Ajoute un contour très fin autour de chaque carte */
+  border-radius: 4px; /* Arrondit légèrement les coins de chaque carte */
+  position: relative;
+  z-index: 1;
+  width: 200px;
+}
+
+/* Style pour les images d'ingrédient */
+.liste-ingredients .card-img-top {
+  width: 100%; /* La largeur de l'image occupera toute la largeur de la carte */
+  height: auto; /* Permet à la hauteur de s'adapter à la largeur */
+}
+
+/* Style pour les titres d'ingrédient */
+.liste-ingredients .card-title {
+  text-align: center; /* Centre le texte */
+}
+
+/* Style pour les rangées */
+.liste-ingredients .row {
+  display: flex; /* Utilisation de flexbox pour aligner les éléments sur la ligne */
+  flex-wrap: wrap; /* Permet aux éléments de passer à la ligne si l'espace est insuffisant */
+}
