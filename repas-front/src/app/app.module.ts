@@ -3,8 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-
 import { HttpClientModule } from '@angular/common/http';
+
 import { HomeComponent } from './home/home.component';
 import { UtilisateurComponent } from './utilisateur/utilisateur.component';
 import { LoginComponent } from './login/login.component';
@@ -14,11 +14,14 @@ import { DessertComponent } from './dessert/dessert.component';
 import { BoissonComponent } from './boisson/boisson.component';
 import { EntreeComponent } from './entree/entree.component';
 import { AboutComponent } from './about/about.component';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PlatComponent } from './plat/plat.component';
 import { AdministrateurComponent } from './administrateur/administrateur.component';
 import { RecetteComponent } from './recette/recette.component';
+import { IngredientComponent } from './ingredient/ingredient.component';
+
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {DragDropModule} from '@angular/cdk/drag-drop';
+
 
 @NgModule({
   declarations: [
@@ -34,7 +37,8 @@ import {DragDropModule} from '@angular/cdk/drag-drop';
     AboutComponent,
     PlatComponent,
     AdministrateurComponent,
-    RecetteComponent
+    RecetteComponent,
+    IngredientComponent
     
   ],
   imports: [

@@ -62,3 +62,18 @@ export enum TypeRecette {
     DESSERT = 'DESSERT',
     BOISSON = 'BOISSON'
 }
+
+export class Ingredient{
+    public id?: number;
+    public nom?: string;
+    public photo?: string;
+    public checked?: boolean;
+
+    constructor(id: number, nom: string, photo: string, checked:boolean) {
+        this.id = id;
+        this.nom = nom;
+        this.photo = photo; 
+        this.checked = checked;  
+    }
+
+}

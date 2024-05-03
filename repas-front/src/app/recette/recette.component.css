@@ -1,10 +1,10 @@
-.entres {
+/*.entres {
     background-color: #ffffff;
     display: flex;
     flex-direction: row;
     justify-content: center;
     width: 100%;
-  }
+  }*/
   
   .entres .div {
     background-color: var(--neutral-01);
@@ -13,9 +13,21 @@
     height: 2953px;
     position: relative;
   }
+  /******test*/
+  .entres {
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+  }
   
-
-  
+  .entres .content {
+    width: 80%; /* Largeur de votre contenu */
+    display: flex;
+    flex-direction: column; /* Dispose le contenu en colonnes */
+    align-items: center; /* Centre le contenu horizontalement */
+    padding: 20px; /* Ajoute un peu d'espace autour du contenu */
+  }
+  /*******/
   .entres .overlap {
     position: absolute;
     width: 1600px;
@@ -374,42 +386,46 @@
   }*/
   
   .entres .content-3 {
-    position: absolute;
+    position: relative;
+    
     width: 1296px;
     height: 1386px;
     
     left: 164px;
+    
   }
 
 /************ modif recette */
 /* Style pour les cartes de recettes */
-.card {
+.entres .card {
   width: 100%; /* Définit la largeur de chaque carte */
   height: auto; /* Permet à la hauteur de s'adapter au contenu */
   margin-bottom: 20px; /* Ajoute de l'espace entre chaque carte */
   border: 1px solid #ddd; /* Ajoute un contour très fin autour de chaque carte */
   border-radius: 4px; /* Arrondit légèrement les coins de chaque carte */
+  position: relative;
+  z-index: 1;
 }
 
 /* Style pour les images de recettes */
-.card-img-top {
+.entres .card-img-top {
   width: 100%; /* La largeur de l'image occupera toute la largeur de la carte */
   height: auto; /* Permet à la hauteur de s'adapter à la largeur */
 }
 
 /* Style pour les titres de recettes */
-.card-title {
+.entres .card-title {
   text-align: center; /* Centre le texte */
 }
 
 /* Style pour les rangées */
-.row {
+.entres .row {
   display: flex; /* Utilisation de flexbox pour aligner les éléments sur la ligne */
   flex-wrap: wrap; /* Permet aux éléments de passer à la ligne si l'espace est insuffisant */
 }
 
 /* Style pour les colonnes */
-.col-md-3 {
+.entres .col-md-3 {
   flex: 0 0 25%; /* Chaque colonne occupera 25% de la largeur de son conteneur */
   max-width: 25%; /* Définit la largeur maximale de chaque colonne */
   padding: 0 15px; /* Ajoute de l'espace intérieur à chaque colonne */
