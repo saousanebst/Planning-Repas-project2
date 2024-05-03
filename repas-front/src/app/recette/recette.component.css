@@ -455,3 +455,6 @@
 .day {
   font-style: italic;
 }
+.cdk-drag {
+  cursor: move;
+}

@@ -26,7 +26,7 @@
               <div class="title-2">
                 <div class="text-wrapper-6">Mes Recettes</div>
                 <p class="d-couvrez-notre-d">
-                  Découvrez notre délicieuse sélection d&#39;entrée qui raviront vos papilles dès la première bouchée !
+                  Découvrez notre délicieuse sélection d'entrée qui raviront vos papilles dès la première bouchée !
                 </p>
               </div>
               <div class="button">
@@ -56,13 +56,13 @@
               </thead>
               <tbody>
                 <!-- Lignes pour les repas -->
-                <tr *ngFor="let meal of meals">
+                <tr *ngFor="let meal of meals; let mealIndex = index">
                   <td>{{ meal }}</td>
-                  <ng-container *ngFor="let day of days">
-                    <td id="{{ meal }}-{{ day.name }}" cdkDropList (cdkDropListDropped)="dropRecetteDansCase($event)">
-                      <ng-container *ngIf="done[meal]?.hasOwnProperty(day.name)">
-                        <div cdkDrag [cdkDragData]="getRecettesForDayAndMeal(day, meal)">
-                          {{ getRecettesForDayAndMeal(day, meal)[0]?.nom }}
+                  <ng-container *ngFor="let day of days; let dayIndex = index">
+                    <td cdkDropList (cdkDropListDropped)="dropRecetteDansCase($event)">
+                      <ng-container *ngIf="done[meals[mealIndex]] && done[meals[mealIndex]][day.name]">
+                        <div *ngFor="let recette of done[meals[mealIndex]][day.name]" cdkDrag [cdkDragData]="recette">
+                          {{ recette.nom }}
                         </div>
                       </ng-container>
                     </td>
@@ -70,6 +70,8 @@
                 </tr>
               </tbody>
             </table>
+            
+            
             
             
           </div>

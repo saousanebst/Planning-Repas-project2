@@ -71,10 +71,11 @@ export class RecetteComponent implements OnInit {
       const meal = this.meals[event.currentIndex];
       const dayName = this.days[event.previousIndex].name;
       this.done[meal][dayName].push(recette);
+      
     }
   }
 
   getRecettesForDayAndMeal(day: { name: string, date: Date }, meal: string): Recette[] {
-    return this.done[meal][day.name];
+    return this.done[meal]?.[day.name] ?? [];
   }
 }
