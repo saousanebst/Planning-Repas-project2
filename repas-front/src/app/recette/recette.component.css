@@ -414,3 +414,28 @@
   max-width: 25%; /* Définit la largeur maximale de chaque colonne */
   padding: 0 15px; /* Ajoute de l'espace intérieur à chaque colonne */
 }
+
+
+
+
+
+/*pour notre tableau*/
+.container {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.container th,
+.container td {
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+.date {
+  font-weight: bold;
+}
+
+.day {
+  font-style: italic;
+}
