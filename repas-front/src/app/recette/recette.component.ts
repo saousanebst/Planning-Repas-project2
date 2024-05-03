@@ -18,7 +18,7 @@ export class RecetteComponent implements OnInit{
   days: { name: string, date: Date }[] = [];
   meals: string[] = ['PETIT-DÉJEUNER', 'DÉJEUNER', 'GOÛTER', 'DÎNER'];
   
-  done?: Recette[];
+  done: Recette[]=[];
   
   
   constructor(private recetteService: RecetteService) { 
@@ -31,10 +31,10 @@ export class RecetteComponent implements OnInit{
   }
 
   getRecettes(): void {
-    this.recetteService.getRecettes()
-        .subscribe(
+    this.recetteService.getRecettes().subscribe(
+        
             recettes => {
-                this.recettes = recettes;
+                this.recettes = recettes || [];
                 console.log(recettes); // Vérifiez si toutes les recettes sont récupérées ici
             },
             error => {
@@ -62,19 +62,6 @@ getDayName(dayIndex: number): string {
 }
 
 
-drop(event: CdkDragDrop<string[]>):void {
-  if (event.previousContainer === event.container) {
-    // Reorder items within the same list
-    moveItemInArray(event.container.data, event.previousIndex, event.currentIndex);
-  } else {
-    // Move items between lists
-    transferArrayItem(
-      event.previousContainer.data,
-      event.container.data,
-      event.previousIndex,
-      event.currentIndex
-    );
-  }
-}
+
 
 }

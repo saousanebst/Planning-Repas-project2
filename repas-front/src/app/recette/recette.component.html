@@ -1,74 +1,74 @@
 <div class="entres">
-    <div class="div">
+  <div class="div">
 
-        <div class="overlap">
-            <div class="hero">
-              <div class="overlap-2">
-                <div class="content-2">
-                  <div class="cards">
-                    
-                    <div class="container" cdkDropList id="recettes" [cdkDropListConnectedTo]="['done']" [cdkDropListData]="recettes" (cdkDropListDropped)="drop($event)">
-                        <div class="row">
-                          <!-- Boucle *ngFor pour afficher les recettes -->
-                          <div class="col-md-3 mb-4" *ngFor="let recette of recettes">
-                            <div class="card">
-                                <img class="card-img-top" [src]="'assets/images/entree_images/img/' + recette.photo" alt="Image de la recette">
-                              <div class="card-body">
-                                <h5 class="card-title" cdkDrag *ngFor="let item of recettes">{{ recette.nom }}</h5>
-                              </div>
+      <div class="overlap">
+          <div class="hero">
+            <div class="overlap-2">
+              <div class="content-2">
+                <div class="cards">
+                  
+                  <div class="container">
+                      <div class="row">
+                        <!-- Boucle *ngFor pour afficher les recettes -->
+                        <div class="col-md-3 mb-4" *ngFor="let recette of recettes">
+                          <div class="card" cdkDrag>
+                              <img class="card-img-top" [src]="'assets/images/entree_images/img/' + recette.photo" alt="Image de la recette">
+                            <div class="card-body">
+                              <h5 class="card-title">{{ recette.nom }}</h5>
                             </div>
                           </div>
-                          <!-- Fin de la boucle *ngFor -->
                         </div>
+                        <!-- Fin de la boucle *ngFor -->
                       </div>
-                      
+                    </div>
+                    
 
+                </div>
+                <div class="title">
+                  <div class="title-2">
+                    <div class="text-wrapper-6">Mes Recettes</div>
+                    <p class="d-couvrez-notre-d">
+                      Découvrez notre délicieuse sélection d&#39;entrée qui raviront vos papilles dès la
+                      première bouchée !
+                    </p>
                   </div>
-                  <div class="title">
-                    <div class="title-2">
-                      <div class="text-wrapper-6">Mes Recettes</div>
-                      <p class="d-couvrez-notre-d">
-                        Découvrez notre délicieuse sélection d&#39;entrée qui raviront vos papilles dès la
-                        première bouchée !
-                      </p>
-                    </div>
-                    <div class="button">
-                      <div class="button-base"><button [routerLink]="['/entree']" routerLinkActive="active" class="button-2">Entrée</button></div>
-                      <div class="button-base-2"><button  [routerLink]="['/plat']" routerLinkActive="active" class="button-3">Plat</button></div>
-                      <div class="button-base-2"><button  [routerLink]="['/boisson']" routerLinkActive="active" class="button-3">Boisson</button></div>
-                      <div class="button-base-2"><button  [routerLink]="['/dessert']" routerLinkActive="active" class="button-3">Desserts</button></div>
-                    </div>
+                  <div class="button">
+                    <div class="button-base"><button [routerLink]="['/entree']" routerLinkActive="active" class="button-2">Entrée</button></div>
+                    <div class="button-base-2"><button  [routerLink]="['/plat']" routerLinkActive="active" class="button-3">Plat</button></div>
+                    <div class="button-base-2"><button  [routerLink]="['/boisson']" routerLinkActive="active" class="button-3">Boisson</button></div>
+                    <div class="button-base-2"><button  [routerLink]="['/dessert']" routerLinkActive="active" class="button-3">Desserts</button></div>
                   </div>
                 </div>
-  </div> 
-  <div class="text-wrapper-9">Mon calendrier</div>
-  <br><br><br><br><br><br><br><br><br><br>
-  <div class="content-3">
-  <div class="text-wrapper-19">
-    <table class="container" cdkDropList id="done" [cdkDropListConnectedTo]="['recettes']" [cdkDropListData]="done" (cdkDropListDropped)="drop($event)">
-      <thead>
-        <tr>
-          <th></th>
-          <th *ngFor="let day of days">
-            <div class="date">{{ day.date | date:'dd/MM/yyyy' }}</div>
-            <div class="day">{{ day.name }}</div>
-          </th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let meal of meals">
-          <td cdkDrag *ngFor="let item of done">{{ meal }}</td>
-          <td *ngFor="let day of days"></td>
-        </tr>
-      </tbody>
-    </table>
-    
-    
-  </div>
-  </div>
-          </div>
+              </div>
+</div> 
+<div class="text-wrapper-9">Mon calendrier</div>
+<br><br><br><br><br><br><br><br><br><br>
+<div class="content-3">
+<div class="text-wrapper-19">
+  <table>
+    <thead>
+      <tr>
+        <th></th>
+        <th *ngFor="let day of days">
+          <div class="date">{{ day.date | date:'dd/MM/yyyy' }}</div>
+          <div class="day">{{ day.name }}</div>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let meal of meals">
+        <td>{{ meal }}</td>
+        <td *ngFor="let day of days"></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+</div>
+</div>
+        </div>
 
-    </div>
+  </div>
 </div>
 
 </div>
